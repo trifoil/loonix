@@ -12,7 +12,7 @@
            $E "   \xE2\x94\x82                                          \xE2\x94\x82"
            done
            MARK;TPUT 1 5
-           $E "              DESKTOPIFY                  " ;UNMARK;
+           $E "        MANKOULANIX ET GROGUSTIN          " ;UNMARK;
            TPUT 2 5
            $E "      SELECT A DESKTOP ENVIRONMENT        " ;UNMARK;}
            i=0; CLEAR; CIVIS;NULL=/dev/null
