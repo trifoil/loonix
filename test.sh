@@ -14,7 +14,7 @@
            MARK;TPUT 1 5
            $E "        MANKOULANIX ET GROGUSTIN          " ;UNMARK;
            TPUT 2 5
-           $E "      SELECT A DESKTOP ENVIRONMENT        " ;UNMARK;}
+           $E "           SELECT AN OPTION               " ;UNMARK;}
            i=0; CLEAR; CIVIS;NULL=/dev/null
    FOOT(){ MARK;TPUT 15 5
            $E " UP \xE2\x86\x91 \xE2\x86\x93 DOWN    ENTER - SELECT,NEXT       ";UNMARK;}
