@@ -66,3 +66,4 @@ REFRESH(){ after=$((i+1)); before=$((i-1))
         6) S=M6;SC;if [[ $cur == enter ]];then R;$e "\n$($e ubuntu-studio)\n";ES;fi;;
         7) S=M7;SC;if [[ $cur == enter ]];then R;$e "\n$($e xubuntu)\n";ES;fi;;
         8) S=M8;SC;if [[ $cur == enter ]];then R;exit 0;fi;;
+ esac;POS;done
