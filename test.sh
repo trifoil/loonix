@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Borrowed from https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script
-#               by oToGamez
-#               www.pro-toolz.net
-
       E='echo -e';e='echo -en';trap "R;exit" 2
     ESC=$( $e "\e")
    TPUT(){ $e "\e[${1};${2}H" ;}
