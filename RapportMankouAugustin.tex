@@ -1,0 +1,106 @@
+\documentclass{article}
+
+% Packages for various functionalities
+\usepackage{graphicx} % For including images
+\usepackage{amsmath} % For mathematical symbols and equations
+\usepackage{hyperref} % For hyperlinks
+\usepackage{listings} % For including code snippets
+
+% Title
+\title{Projet Linux}
+\author{FOFANAH Mankoulani \and VANGEEBERGEN Augustin}
+
+\date{\today}
+\renewcommand \contentsname{Table des matières}
+\begin{document}
+	
+	\maketitle
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{logo.png}
+
+		\label{fig:your_label}
+	\end{figure}
+	
+	\newpage
+
+	% Table of Contents
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	% Brief summary of your report
+	
+	
+	L'objectif global de ce travail de groupe est de configurer un serveur linux, d'une distribution proche de RHEL, par exemple Fedora, ou bien Alma (et par extension de savoir se débrouiller avec un système GNU/Linux). 
+	
+	L'OS sera dans une machine virtuelle, hébergée sur un HYPER-V de Windows (beurk). De cette manière, aussi bien un utilisateur Windows que linux pourra accéder à  son partage, etc, ect.
+	
+	\subsection{Consignes professeur}
+	
+	Les consignes sont les suivantes : 
+	
+	\begin{itemize}
+		\item Le serveur devra contenir un partage NFS qui permettra aux utilisateurs du réseaux local d’y stocker des fichiers.
+		\item Un partage Samba permettra aux utilisateurs Windows d’accéder à ce même partage.
+		\item Il faudra mettre en place un serveur Web, FTP, MySQL et DNS qui permettra un hébergement multiutilisateurs. Le FTP permettra à chaque utilisateur d’accéder à son dossier Web. Il faudra créer une zone dans le DNS pour nos sites. (Automatisation)
+		\item Le DNS fera également office de DNS cache pour le réseau local.
+		\item Vous mettrez en place un serveur de temps pour que les machines du réseau local puissent se synchroniser.
+		\item Vous devrez pouvoir vous connecter en SSH au serveur et y effectuer des configurations. (sécurité !!!)
+		\item Pour la sécurité :
+		\begin{itemize}
+			\item politique utilisateur
+			\item quotas
+			\item partitionnement et gestion disque (LVM et raid)
+			\item Gestion backup(ou, comment,…)
+			\item Maj, désactiver l’inutile.
+			\item Antivirus, firewall, ….
+		\end{itemize}
+		\item Vous êtes l’administrateur de ce serveur agissez en conséquence :
+		\begin{itemize}
+			\item Documenter
+			\item Automatiser (script)
+			\item Soyez proactif
+			\item Sécurisez
+			\item Tester
+		\end{itemize}
+		\item Le travail sera réalisé par groupe de deux et évaluer par moi pendant la session de juin
+		\item Il faudra une machine cliente pour effectuer les tests (Windows et Linux)
+		\item Vous devrez me démontrer le fonctionnement des services en 15 minutes. Donc connaissez votre machine et vos configurations sur le bout des doigts. Vous aurez 10 minutes pour installer le tout.
+		\item L’évaluation comptera pour 100\% des points. 
+		
+	\end{itemize}
+	
+	\subsection{Roadmap}
+	L'ensemble sera scripté pour coller à l'ensemble des cas d'utilisation. Voici donc la liste prévue de ces scripts :
+			\begin{itemize}
+				\item Menu de sélection
+				\item SSH config wizard
+				\item File sharing install wizard
+				\item Web server install wizard
+				\item FTP server install wizard
+				\item MySQL server 
+				\item DNS server (+ cache + création de zone + serveur cache)
+				\item Time server
+				\item Sécurisation
+				\item Backup
+				\item Updates
+				\item Partitionnement
+		\end{itemize}
+	\subsection{Répartition des tâches}
+	
+	\section{Code}
+	% Introduction to the topic and purpose of the report
+	
+	\section{Conclusion}
+	% Review of relevant literature and previous research
+	
+		\newpage
+	% References
+	\begin{thebibliography}{9}
+		\bibitem{reference1}
+		Author, A. (Year). Title of the article. \textit{Journal Name}, Volume(Issue), Pages.
+	\end{thebibliography}
+
+\end{document}
