@@ -1,12 +1,12 @@
 \documentclass{article}
 
-% Packages for various functionalities
+
 \usepackage{graphicx} % For including images
 \usepackage{amsmath} % For mathematical symbols and equations
 \usepackage{hyperref} % For hyperlinks
 \usepackage{listings} % For including code snippets
 
-% Title
+
 \title{Projet Linux}
 \author{FOFANAH Mankoulani \and VANGEEBERGEN Augustin}
 
@@ -25,12 +25,12 @@
 	
 	\newpage
 
-	% Table of Contents
+
 	\tableofcontents
 	\newpage
 	
 	\section{Introduction}
-	% Brief summary of your report
+
 	
 	
 	L'objectif global de ce travail de groupe est de configurer un serveur linux, d'une distribution proche de RHEL, par exemple Fedora, ou bien Alma (et par extension de savoir se débrouiller avec un système GNU/Linux). 
@@ -57,6 +57,7 @@
 			\item Maj, désactiver l’inutile.
 			\item Antivirus, firewall, ….
 		\end{itemize}
+		\newpage
 		\item Vous êtes l’administrateur de ce serveur agissez en conséquence :
 		\begin{itemize}
 			\item Documenter
@@ -73,7 +74,7 @@
 	\end{itemize}
 	
 	\subsection{Roadmap}
-	L'ensemble sera scripté pour coller à l'ensemble des cas d'utilisation. Voici donc la liste prévue de ces scripts :
+	L'ensemble sera scripté pour coller à l'ensemble des cas d'utilisation. Voici donc la liste prévue de ces scripts (pour installer/désinstaller):
 			\begin{itemize}
 				\item Menu de sélection
 				\item SSH config wizard
@@ -88,14 +89,81 @@
 				\item Updates
 				\item Partitionnement
 		\end{itemize}
+		Il est donc indispensable de se former au BASH, afin de savoir faire un bon TUI, ainsi que des commandes conditionnelles, selon les features qui sont/ne sont pas déjà installées.
 	\subsection{Répartition des tâches}
-	
+	\begin{itemize}
+		\item Augustin
+		\begin{itemize}
+			\item Rapport (en LaTex, bien sûr)
+			\item Menu TUI (pas jetair)
+		\end{itemize}
+		\item Mankou
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\end{itemize}
 	\section{Code}
-	% Introduction to the topic and purpose of the report
+	\subsection{Intro au Bash}
+	Comme nous devons apprendre le Bash pour les scripts, voici une petite synthèse simplifiée.
+	
+	\begin{center}
+	Un code Bash doit toujours commencer par :
+\end{center}
+\begin{lstlisting}[language=bash, label={lst:bash-script}]
+#!/bin/bash
+echo "Hello, world!"
+\end{lstlisting}
+	
+	\begin{center}
+		Une variable va se déclarer comme ceci :
+	\end{center}
+	\begin{lstlisting}
+name="John"
+age=30
+	\end{lstlisting}
+
+	\begin{center}
+On accède à sa valeur comme ceci :
+\end{center}
+
+\begin{lstlisting}[language=bash, label={lst:bash-script}]
+# Access and print variables
+echo "Name: $name"
+echo "Age: $age"
+
+# You can also use the curly braces syntax
+echo "Name: ${name}"
+echo "Age: ${age}"
+\end{lstlisting}
+
+\begin{center}
+	Une condition va s'écrire comme ceci :
+\end{center}
+	
+\begin{lstlisting}[language=bash, label={lst:bash-script}]
+if [ condition ]; then
+# Commandes executees si condition vraie
+else
+# Commandes executees si condition fausse
+fi
+
+\end{lstlisting}
+	
+	\subsection{Menu TUI}
+	\subsection{Backup}
+	Le menu Backup doit comporter deux options :
+	\begin{itemize}
+		\item Backup
+		\item Restore
+	\end{itemize}
+	\subsection{Partitionnement}		
+
+	\subsection{Menu TUI}
+	
 	\newpage
 	\section{Conclusion}
 	\subsection{Conlusion}
-	% Review of relevant literature and previous research
+
 	\subsection{Meme}
 		\begin{center}Me when Linux on Windows :
 	\end{center}
@@ -106,7 +174,7 @@
 		\label{fig:your_label}
 	\end{figure}
 		\newpage
-	% References
+
 	\begin{thebibliography}{9}
 		\bibitem{reference1}
 		Author, A. (Year). Title of the article. \textit{Journal Name}, Volume(Issue), Pages.
