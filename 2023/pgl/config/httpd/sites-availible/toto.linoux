@@ -1,0 +1,15 @@
+
+<VirtualHost *:80>
+        ServerName toto.linoux
+        DocumentRoot /www/toto.linoux/html
+        DirectoryIndex index.php index.htm index.html
+        #Alias /icons/ /www/toto.linoux/icons/
+
+        <Directory /www/toto.linoux/html>
+                Require all granted
+		            AllowOverride all
+		            Options -ExecCGI -Indexes
+                Satisfy all
+        </Directory>
+</VirtualHost>
+

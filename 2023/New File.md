@@ -1,0 +1,14 @@
+- [x] nfs public
+- [x] samba public
+- [x] backup system
+- [x] backup data
+- [x] backup log
+- [x] basic apache 
+- [x] antivirus
+- [x] ntp
+- [x] ssh
+- [x] dns cache
+- [x] DATABASE
+- [ ] script site web
+- [x] quota
+- [x] mettre une putain de banniere

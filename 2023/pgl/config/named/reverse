@@ -1,0 +1,11 @@
+$TTL    86400
+@       IN      SOA     random.lan. www.random.lan. (
+                    2023050151      ;Serial
+                    3600            ;Refresh
+                    1800            ;Retry
+                    604800          ;Expire
+                    86400           ;Minimum TTL
+            )
+            
+       IN      NS      ns1.random.lan.
+       IN      NS      ns2.random.lan.

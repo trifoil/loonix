@@ -1,0 +1,1 @@
+/share *(rw,all_squash,root_squash,sync,anonuid=99,anongid=99)

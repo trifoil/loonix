@@ -1,0 +1,15 @@
+
+<VirtualHost *:80>
+        ServerName .lan
+        DocumentRoot /www/.lan/html
+        DirectoryIndex index.php index.htm index.html
+        #Alias /icons/ /www/.lan/icons/
+
+        <Directory /www/.lan/html>
+                Require all granted
+		            AllowOverride all
+		            Options -ExecCGI -Indexes
+                Satisfy all
+        </Directory>
+</VirtualHost>
+
