@@ -20,7 +20,7 @@ display_menu() {
     echo "| 3. FTP server wizard                                                  |"
     echo "| 4. MySQL server wizard                                                |"
     echo "| 5. DNS server wizard                                                  |"
-    echo "| 6. NTP server wizard                                                 |"
+    echo "| 6. NTP server wizard                                                  |"
     echo "|-----------------------------------------------------------------------|"
     echo "| Server health :                                                       |"
     echo "|-----------------------------------------------------------------------|"
