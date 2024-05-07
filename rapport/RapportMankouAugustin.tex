@@ -5,6 +5,7 @@
 \usepackage{amsmath} % For mathematical symbols and equations
 \usepackage{hyperref} % For hyperlinks
 \usepackage{listings} % For including code snippets
+\usepackage{amssymb}
 
 
 \title{Projet Linux}
@@ -148,6 +149,42 @@ fi
 \end{lstlisting}
 	
 	\subsection{Menu TUI}
+	Le menu principal en TUI est un simple menu permettant de choisir le script concernant une manipulation spécifique d'un ou plusieurs services destiné(s) au serveur.
+	Il affiche les options dans un ordre prédéfini, sélectionnables par un nombre à partir de 0.
+	\subsection{Partage SAMBA}
+	Premièrement le script va installer le package "samba", si ce n'est pas déjà fait.
+	Il va ensuite donner le choix à l'utilisateur pour gérer son partage samba.
+	 
+	(afin de voir quels sont les utilisateurs existants, ainsi que les groupes et directories associés au(x) partage(s).)
+	A noter que les utilisateurs samba ont par défaut besoin d'être associés à un utilisateur UNIX, même si les deux bases de données sont bien distinctes.
+	Il va nous falloir un menu pour pouvoir éditer :
+	\begin{itemize}
+		\item Les utilisateurs :
+		\begin{itemize}
+			\item[\checkmark] Lister  
+			\begin{itemize}
+				\item[\checkmark] utilisateurs UNIX
+				\item[\checkmark] utilisateurs samba
+			\end{itemize}
+			\item[\checkmark] Ajouter 
+			\begin{itemize}
+					\item[\checkmark] utilisateur UNIX
+				\item[\checkmark] utilisateur samba 
+			\end{itemize}
+			\item Retirer
+						\begin{itemize}
+				\item utilisateur UNIX
+				\item[\checkmark] utilisateur samba 
+				\item [\checkmark] tous les utilisateurs samba (à part root)
+			\end{itemize}
+			\item Désactiver utilisateur samba
+			\item Activer utilisateur samba
+			\item Changer le mot de passe
+		\end{itemize}
+		
+	\end{itemize}
+	\subsection{Partage NFS}
+	Envie de crever
 	\subsection{Backup}
 	Le menu Backup doit comporter deux options :
 	\begin{itemize}

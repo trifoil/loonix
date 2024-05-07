@@ -31,10 +31,16 @@ display_menu() {
 }
 nfs_share_wizard() {
     echo "Welcome to the NFS share wizard!"
-    chmod +x 
+    chmod +x wizards/nfs_share_wizard.sh
+}
+smb_share_wizard() {
+    echo "Welcome to the SMB share wizard!"
+    chmod +x wizards/smb_share_wizard.sh
+    sh wizards/smb_share_wizard.sh
 }
 ntp_server_wizard() {
     echo "Welcome to the NTP server wizard!"
+    chmod +x wizards/ntp_server_wizard.sh
 }
 
 # Main function
@@ -44,6 +50,7 @@ main() {
         read -p "Enter your choice: " choice
         case $choice in
             0) nfs_share_wizard ;;
+            1) smb_share_wizard ;;
             6) ntp_server_wizard ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
