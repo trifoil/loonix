@@ -5,4 +5,3 @@ display_menu() {
     echo "| 1.           |"
     echo "| q. Quit                       |"
 }
-

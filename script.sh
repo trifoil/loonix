@@ -5,6 +5,8 @@ clear
 RED='\033[0;31m' #Red
 NC='\033[0m' # No Color
 
+updatedb
+
 # Function to display the menu
 display_menu() {
     echo ""
@@ -40,6 +42,19 @@ smb_share_wizard() {
     chmod +x wizards/smb_share_wizard.sh
     sh wizards/smb_share_wizard.sh
 }
+
+web_server_wizard() {
+    echo "Welcome to the web server wizard!"
+    chmod +x wizards/web_server_wizard.sh
+    sh wizards/web_server_wizard.sh
+}
+
+ftp_server_wizard() {
+    echo "Welcome to the ftp server wizard!"
+    chmod +x wizards/ftp_server_wizard.sh
+    sh wizards/ftp_server_wizard.sh
+}
+
 ntp_server_wizard() {
     echo "Welcome to the NTP server wizard!"
     chmod +x wizards/ntp_server_wizard.sh
@@ -53,6 +68,8 @@ main() {
         case $choice in
             0) nfs_share_wizard ;;
             1) smb_share_wizard ;;
+            2) web_server_wizard ;;
+            3) ftp_server_wizard ;;
             6) ntp_server_wizard ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
