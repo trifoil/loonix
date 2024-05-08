@@ -27,6 +27,8 @@ display_menu() {
     echo "| 7. Multitool (User policy/quota/disk-man/updates/antivirus-firewall)  |"
     echo "| 8. Backup                                                             |"
     echo "|-----------------------------------------------------------------------|"
+    echo "| q. Quit                                                               |"
+    echo "|-----------------------------------------------------------------------|"
     echo ""
 }
 nfs_share_wizard() {
@@ -52,6 +54,7 @@ main() {
             0) nfs_share_wizard ;;
             1) smb_share_wizard ;;
             6) ntp_server_wizard ;;
+            q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
         ##clear

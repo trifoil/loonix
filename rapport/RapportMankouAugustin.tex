@@ -180,28 +180,84 @@ fi
 			\item Désactiver utilisateur samba
 			\item Activer utilisateur samba
 			\item Changer le mot de passe
-		\end{itemize}
-		
+		\end{itemize}	
 	\end{itemize}
 	\subsection{Partage NFS}
-	Envie de crever
+	Concu pour partager des fichiers entre OS de type Unix, 
+	
+	\newpage
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\subsection{Serveur Web}
+	Le déploiement d'un serveur web sous alma (ou fedora) est décrit dans cet \href{https://docs.fedoraproject.org/en-US/fedora-server/services/httpd-basic-setup/}{article}.
+	Deux subdirectories sont utiles pour la configuration :
+	\begin{itemize}
+		\item \texttt{/etc/httpd/conf.d}
+		
+		Pour stocker la configuration des différents sites web
+		\item \texttt{/etc/httpd/conf.modules.d}
+		
+		Pour les modules chargés dynamiquement
+	\end{itemize}
+	Historiquement, les données du site web sont par défaut stockées dans :
+	\begin{itemize}
+		\item \texttt{/var/www/}
+	\end{itemize}
+	Cependant, pour plusieurs sites, il existe deux méthodes.
+	\begin{itemize}
+		\item utiliser  le directory \texttt{/var/www/} et stocker les sites dans des subdirectories (facile pour SELinux, peu orthodoxe car modifie la configuration de base)
+		\item utiliser le directory /srv et stocker les sites dans des subdirectories avec dans ceux-ci :
+		\begin{itemize}
+			 \item htdocs
+			 \item webapps
+			 \item mail
+			 \item ...
+		\end{itemize}
+	\end{itemize}
+	
+	Nous utiliserons donc :
+	\begin{itemize}
+		\item \texttt{/srv/<DOMAINNAME>/} pour stocker les données relatives au domaine
+		\item  \texttt{/srv/<DOMAINMANE>/htdocs/} pour les pages html statiques
+	\end{itemize}
+	
+	Il faut 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\newpage
+	
 	\subsection{Backup}
 	Le menu Backup doit comporter deux options :
 	\begin{itemize}
 		\item Backup
 		\item Restore
 	\end{itemize}
-	\subsection{Partitionnement}		
-
-	\subsection{Menu TUI}
 	
-	Pouur le menu TUI, nous optons pour un menu simple mais robuste, 
+	\newpage
 	
-	\subsection{Partage NFS}
-	
-	\subsection{Partage SMB}
-	
-	\subsection{Serveur Web}
+	\subsection{Partitionnement}
 	
 	\newpage
 	\section{Conclusion}
