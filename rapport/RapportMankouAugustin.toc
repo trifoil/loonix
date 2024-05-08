@@ -8,8 +8,8 @@
 \contentsline {subsection}{\numberline {2.3}Partage SAMBA}{6}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Partage NFS}{6}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Serveur Web}{7}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Backup}{8}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Partitionnement}{9}{subsection.2.7}%
-\contentsline {section}{\numberline {3}Conclusion}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Conlusion}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Meme}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {2.6}Backup}{9}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Partitionnement}{10}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Conclusion}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Conlusion}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Meme}{11}{subsection.3.2}%

@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage{xcolor}
 
 \usepackage{graphicx} % For including images
 \usepackage{amsmath} % For mathematical symbols and equations
@@ -185,6 +186,9 @@ fi
 	\subsection{Partage NFS}
 	Concu pour partager des fichiers entre OS de type Unix, 
 	
+	Montage d'un FS samba sous Unix :
+	\texttt{mount -t smbfs -o} (voir annexes du cours de linux P78)
+	
 	\newpage
 	
 	
@@ -222,14 +226,27 @@ fi
 			 \item ...
 		\end{itemize}
 	\end{itemize}
-	
 	Nous utiliserons donc :
 	\begin{itemize}
 		\item \texttt{/srv/<DOMAINNAME>/} pour stocker les données relatives au domaine
 		\item  \texttt{/srv/<DOMAINMANE>/htdocs/} pour les pages html statiques
 	\end{itemize}
+	\colorbox{yellow}{\textcolor{red}{!! A compléter pour le setup des LVM !!}}
 	
-	Il faut 
+	\newpage
+	
+	Il faut  ensuite installer le package httpd. Le manuel en ligne conseille d'installer les packages pour la gestion ssl et pour le monitoring de domaine.
+	
+	Il suffit ensuite de démarrer le service httpd et de l'enable avec systemctl.
+	
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{webservdefault.png}
+		
+		\label{fig:your_label}
+	\end{figure}
+	
+	
 	
 	
 	
