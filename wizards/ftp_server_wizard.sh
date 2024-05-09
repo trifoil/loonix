@@ -4,9 +4,9 @@ display_menu() {
     echo "| 0. Install and enable ftp server (vsftpd)|"
     echo "| 1. Start ftp server                      |"
     echo "| 2. Stop ftp server                       |"
-    echo "| 3. Enable ftp server                    |"    
-    echo "| 4. Disable ftp server                     |"
-    echo "| 5. show ftp server status                |"
+    echo "| 3. Enable ftp server                     |"    
+    echo "| 4. Disable ftp server                    |"
+    echo "| 5. Show ftp server status                |"
     echo "| 6.                                       |"
     echo "| q. Quit                                  |"
 }
