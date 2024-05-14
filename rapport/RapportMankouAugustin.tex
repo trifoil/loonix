@@ -245,30 +245,39 @@ fi
 		\label{fig:your_label}
 	\end{figure}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	Le menu de selection contient donc :
+	\begin{itemize}
+		\item Install web server
+		\item Show httpd status
+		\item Create web dir for user
+		\item Remove web directory of user
+		\item Display web directories
+	\end{itemize}
 	
 	\newpage
 	
 	
 	\subsection{FTP server}
-	Le serveur qui sera utilisé va être vsftpd (Very Secure FTP Daemon). Il est le plus répandu au sein de Fedora Linux, peu gourmand, stable et sécurisé.
 	
-	L'installation est similaire  celle du serveur web. Dans le script, le service est alors enabled par défaut (et démarre donc lors du boot).
+	Chaque utilisateur spécifié doit être en mesure d'utiliser le FTP pour accéder à :
+	\begin{itemize}
+		\item son dossier root
+		\item son dossier web
+	\end{itemize}
+	
+	Le service choisi est vsftpd (Very Secure FTP Daemon). Il est le plus répandu au sein des distributions RedHat-like, peu gourmand, stable et sécurisé.
+	
+	L'installation est similaire  celle du serveur web. Par conséquent, il faudra en premier installer le service, le démarrer et puis ensuite le configurer.
+	
+	Le menu présente diverses options :
+	\begin{itemize}
+		\item Install and enable ftp server
+		\item Start ftp server 
+		\item Stop ftp server
+		\item Enable ftp server
+		\item Disable ftp server 
+		\item Show ftp server status
+	\end{itemize}
 	
 	\subsection{Backup}
 	Le menu Backup doit comporter deux options :
