@@ -20,7 +20,7 @@
 		\centering
 		\includegraphics[width=0.5\textwidth]{logo.png}
 
-		\label{fig:your_label}
+		\label{fig:logoheh}
 	\end{figure}
 	
 	\newpage
@@ -34,6 +34,16 @@
 	L'objectif global de ce travail de groupe est de configurer un serveur linux, d'une distribution proche de RHEL, par exemple Fedora, ou bien Alma (et par extension de savoir se débrouiller avec un système GNU/Linux). 
 	
 	L'OS sera dans une machine virtuelle, hébergée sur un HYPER-V de Windows (beurk). De cette manière, aussi bien un utilisateur Windows que linux pourra accéder à  son partage, etc, ect.
+	
+	\begin{center}Me when Linux on Windows :
+	\end{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{meme.png}
+		
+		\label{fig:your_label}
+	\end{figure}
+	\newpage
 	
 	\subsection{Consignes professeur}
 	
@@ -269,6 +279,10 @@ fi
 	
 	L'installation est similaire  celle du serveur web. Par conséquent, il faudra en premier installer le service, le démarrer et puis ensuite le configurer.
 	
+	Le fichier de configuration de vsftpd est \texttt{/etc/vsftpd/vsftpd.conf}.
+	
+	\texttt{mkdir vsftpd_user_conf}
+	
 	Le menu présente diverses options :
 	\begin{itemize}
 		\item Install and enable ftp server
@@ -288,6 +302,8 @@ fi
 		\end{itemize}
 	\end{itemize}
 	
+	\newpage
+	
 	\subsection{Backup}
 	Le menu Backup doit comporter deux options :
 	\begin{itemize}
@@ -301,18 +317,15 @@ fi
 	
 	\newpage
 	\section{Conclusion}
-	\subsection{Conlusion}
 
-	\subsection{Meme}
-		\begin{center}Me when Linux on Windows :
-	\end{center}
+
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\textwidth]{meme.png}
+		\includegraphics[width=0.5\textwidth]{gosling.png}
 		
-		\label{fig:your_label}
+		\label{fig:gosling}
 	\end{figure}
-		\newpage
+	
 
 	\begin{thebibliography}{9}
 		\bibitem{reference1}

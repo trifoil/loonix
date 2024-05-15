@@ -7,7 +7,7 @@ display_menu() {
     echo "| 3. Enable ftp server                     |"    
     echo "| 4. Disable ftp server                    |"
     echo "| 5. Show ftp server status                |"
-    echo "| 6.                                       |"
+    echo "| 6. Directory attribution                 |"
     echo "| q. Quit                                  |"
 }
 
@@ -46,6 +46,10 @@ show_ftp_status () {
     systemctl status vsftpd.service
 }
 
+directory_attribution () {
+    echo "test"
+}
+
 main() {
     while true; do
         clear
@@ -58,6 +62,7 @@ main() {
             3) enable_ftp_server ;;
             4) disable_ftp_server ;;
             5) show_ftp_status ;;
+            6) directory_attribution ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
