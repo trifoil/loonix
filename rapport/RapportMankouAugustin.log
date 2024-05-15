@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  16 MAY 2024 01:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  16 MAY 2024 01:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,82 +428,42 @@ File: webservdefault.png Graphic file (type png)
 <use webservdefault.png>
 Package pdftex.def Info: webservdefault.png  used on input line 253.
 (pdftex.def)             Requested size: 276.00105pt x 183.04669pt.
- [9 <./webservdefault.png>]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.284 	\texttt{mkdir vsftpd_user_conf}
-                                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.284 	\texttt{mkdir vsftpd_user_conf}
-                                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.285 	
-       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[10] [11] [12]
-<gosling.png, id=166, 1084.05pt x 1084.05pt>
+ [9 <./webservdefault.png>] [10] [11] [12]
+<gosling.png, id=164, 1084.05pt x 1084.05pt>
 File: gosling.png Graphic file (type png)
 <use gosling.png>
-Package pdftex.def Info: gosling.png  used on input line 324.
+Package pdftex.def Info: gosling.png  used on input line 323.
 (pdftex.def)             Requested size: 172.5pt x 172.49214pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
-[]\OT1/cmtt/m/n/10 Author, A. (Year). Title of the article. \OT1/cmtt/m/it/10 J
-ournal Name\OT1/cmtt/m/n/10 ,
- []
-
-[13 <./gosling.png>] (./RapportMankouAugustin.aux)
+ [13 <./gosling.png>]
+(./RapportMankouAugustin.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `RapportMankouAugustin.out' has not changed.
 (rerunfilecheck)             Checksum: 48E9AEECB5684BFC7D8C4410C4493671;1607.
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 284 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 11695 strings out of 477985
- 175644 string characters out of 5839380
+ 11693 strings out of 477985
+ 175621 string characters out of 5839380
  1871388 words of memory out of 6000000
- 31693 multiletter control sequences out of 15000+600000
- 521167 words of font info for 67 fonts, out of 8000000 for 9000
+ 31692 multiletter control sequences out of 15000+600000
+ 520999 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,7n,76p,454b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1000.pfb>
-Output written on RapportMankouAugustin.pdf (13 pages, 2019582 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+cm-super/sfrm1000.pfb>
+Output written on RapportMankouAugustin.pdf (13 pages, 1994997 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
+ 231 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
  51 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
