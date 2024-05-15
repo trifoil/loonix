@@ -259,10 +259,10 @@ fi
 	
 	\subsection{FTP server}
 	
-	Chaque utilisateur spécifié doit être en mesure d'utiliser le FTP pour accéder à :
+	Chaque utilisateur spécifié doit être en mesure d'utiliser le FTP pour accéder :
 	\begin{itemize}
-		\item son dossier root
-		\item son dossier web
+		\item à son dossier root
+		\item à son dossier web
 	\end{itemize}
 	
 	Le service choisi est vsftpd (Very Secure FTP Daemon). Il est le plus répandu au sein des distributions RedHat-like, peu gourmand, stable et sécurisé.
@@ -277,6 +277,15 @@ fi
 		\item Enable ftp server
 		\item Disable ftp server 
 		\item Show ftp server status
+		\item Directory attribution for users :
+		\begin{itemize}
+			\item enable srv for all users
+			\item enable home for all users
+			\item  disable srv for all users
+			\item disable home for all users
+			\item enable srv for the specified user
+			\item enable home for the specified user
+		\end{itemize}
 	\end{itemize}
 	
 	\subsection{Backup}
