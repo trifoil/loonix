@@ -283,10 +283,10 @@ fi
 	
 	\href{https://doc.fedora-fr.org/wiki/Vsftpd_:_Installation_et_configuration}{Article de référence}.
 
-	Chaque utilisateur spécifié doit être en mesure d'utiliser le FTP pour accéder :
+	Chaque utilisateur spécifié doit être en mesure d'utiliser le service FTP pour accéder à :
 	\begin{itemize}
-		\item à son dossier root
-		\item à son dossier web
+		\item son dossier root
+		\item son dossier web
 	\end{itemize}
 	
 	Le service choisi est vsftpd (Very Secure FTP Daemon). Il est le plus répandu au sein des distributions RedHat-like, peu gourmand, stable et sécurisé.
@@ -294,7 +294,21 @@ fi
 	L'installation est similaire  celle du serveur web. Par conséquent, il faudra en premier installer le service, le démarrer et puis ensuite le configurer.
 	
 	Le fichier de configuration de vsftpd est \texttt{/etc/vsftpd/vsftpd.conf}.
-	
+
+	Dans ce fichier de configuration, on va choisir ces options :
+	\begin{itemize}
+	\item On écoute sur le port 21/tcp ;
+    \item On est en standalone ;
+    
+Le mode standalone indique que le serveur est autonome, et que le service tourne en permanence. 
+    \item On refuse les utilisateurs anonymes ;
+    \item On accepte les utilisateurs système et les utilisateurs virtuels ;
+    \item Les utilisateurs virtuels sont mappés sur l'utilisateur système "ftp" ;
+    \item Les utilisateurs n'ont aucun droit d'écriture par défaut ;
+    \item Ils sont chrootés dans /var/ftp/ ;
+    \item texttt{/etc/vsftpd/vsftpd\_user\_conf/} sera le dossier pour les configurations d'utilisateurs virtuels ;
+    \item texttt{/etc/vsftpd/user\_list} contiendra la liste des utilisateurs refusés (pour lesquels on ne demandera même pas le mot de passe).
+	\end{itemize}
 	
 	Le menu présente diverses options :
 	\begin{itemize}
