@@ -69,6 +69,7 @@ txt2db() {
     else
         echo "Il faut donner le fichier d'entrée et le fichier de sortie"
     fi
+    echo "text2db done"
     echo "Press any key to continue..."
     read -n 1 -s key
 }
@@ -102,6 +103,9 @@ cleanconf() {
         echo "Fichier $conf supprimé"
     fi
     done
+    echo "cleanconf done"
+    echo "Press any key to continue..."
+    read -n 1 -s key
 }
 
 start_ftp_server () {
