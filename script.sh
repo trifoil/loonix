@@ -35,30 +35,31 @@ display_menu() {
 }
 nfs_share_wizard() {
     echo "Welcome to the NFS share wizard!"
-    chmod +x wizards/nfs_share_wizard.sh
-    sh wizards/nfs_share_wizard.sh
+    chmod +x wizards/a_nfs_share_wizard.sh
+    sh wizards/a_nfs_share_wizard.sh
 }
 smb_share_wizard() {
     echo "Welcome to the SMB share wizard!"
-    chmod +x wizards/smb_share_wizard.sh
-    sh wizards/smb_share_wizard.sh
+    chmod +x wizards/a_smb_share_wizard.sh
+    sh wizards/a_smb_share_wizard.sh
 }
 
 web_server_wizard() {
     echo "Welcome to the web server wizard!"
-    chmod +x wizards/web_server_wizard.sh
-    sh wizards/web_server_wizard.sh
+    chmod +x wizards/a_web_server_wizard.sh
+    sh wizards/a_web_server_wizard.sh
 }
 
 ftp_server_wizard() {
     echo "Welcome to the ftp server wizard!"
-    chmod +x wizards/ftp_server_wizard.sh
-    sh wizards/ftp_server_wizard.sh
+    chmod +x wizards/a_ftp_server_wizard.sh
+    sh wizards/a_ftp_server_wizard.sh
 }
 
 ntp_server_wizard() {
     echo "Welcome to the NTP server wizard!"
-    chmod +x wizards/ntp_server_wizard.sh
+    chmod +x wizards/a_ntp_server_wizard.sh
+    sh wizards/a_ntp_server_wizard.sh
 }
 
 # Main function
