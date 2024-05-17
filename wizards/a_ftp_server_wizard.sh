@@ -16,14 +16,14 @@ install_ftp_server() {
     dnf -y install vsftpd
     systemctl enable vsftpd.service
     mv /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.default
-    mv config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
+    cp config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
     chmod 600 /etc/vsftpd/vsftpd.conf
 
     sudo firewall-cmd --permanent --add-port=20/tcp
     sudo firewall-cmd --permanent --add-port=21/tcp
     sudo firewall-cmd --reload
     sudo firewall-cmd --list-ports
-    
+
     sleep 1
 }
 
