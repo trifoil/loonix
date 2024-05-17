@@ -5,7 +5,7 @@
 \usepackage{hyperref} % For hyperlinks
 \usepackage{listings} % For including code snippets
 \usepackage{amssymb}
-%\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
 
 \title{Projet Linux}
 \author{FOFANAH Mankoulani \and VANGEEBERGEN Augustin}
@@ -263,7 +263,7 @@ fi
 		\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.8\textwidth]{webservdefault.png}
-		
+		 \caption{Page web par défaut sur Alma}
 		\label{fig:your_label}
 	\end{figure}
 	
@@ -280,20 +280,25 @@ fi
 	
 	
 	\subsection{FTP server}
-	
-	\href{https://doc.fedora-fr.org/wiki/Vsftpd_:_Installation_et_configuration}{Article de référence}.
+	\subsubsection{Introduction}
+	Le service FTP a été configuré à l'aide de cet \href{https://doc.fedora-fr.org/wiki/Vsftpd_:_Installation_et_configuration}{article de référence}.
 
 	Chaque utilisateur spécifié doit être en mesure d'utiliser le service FTP pour accéder à :
 	\begin{itemize}
 		\item son dossier root
 		\item son dossier web
 	\end{itemize}
+
+	\subsubsection{Explications}
 	
-	Le service choisi est vsftpd (Very Secure FTP Daemon). Il est le plus répandu au sein des distributions RedHat-like, peu gourmand, stable et sécurisé.
+	Le service choisi est vsftpd (Very Secure FTP Daemon). Il est le plus répandu au sein des distributions RedHat-like, peu gourmand, stable et sécurisé (d'où son nom).
 	
 	L'installation est similaire  celle du serveur web. Par conséquent, il faudra en premier installer le service, le démarrer et puis ensuite le configurer.
 	
-	Le fichier de configuration de vsftpd est \texttt{/etc/vsftpd/vsftpd.conf}.
+	Le fichier de configuration de vsftpd est : 
+	\begin{center}
+			\texttt{/etc/vsftpd/vsftpd.conf}
+	\end{center}
 
 	Dans ce fichier de configuration, on va choisir ces options :
 	\begin{itemize}
@@ -309,6 +314,8 @@ Le mode standalone indique que le serveur est autonome, et que le service tourne
     \item texttt{/etc/vsftpd/vsftpd\_user\_conf/} sera le dossier pour les configurations d'utilisateurs virtuels ;
     \item texttt{/etc/vsftpd/user\_list} contiendra la liste des utilisateurs refusés (pour lesquels on ne demandera même pas le mot de passe).
 	\end{itemize}
+	
+	\subsubsection{Utilisation du script}
 	
 	Le menu présente diverses options :
 	\begin{itemize}

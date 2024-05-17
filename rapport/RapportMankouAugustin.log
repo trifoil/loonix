@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  17 MAY 2024 01:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  17 MAY 2024 02:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,9 +310,28 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count290
+\Gm@cntv=\count291
+\c@Gm@tempcnt=\count292
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks23
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count290
+\l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box55
 )
 (./RapportMankouAugustin.aux
@@ -348,17 +367,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen160
+\scratchcounter=\count294
+\scratchdimen=\dimen168
 \scratchbox=\box56
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen161
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks24
+\nofMPsegments=\count295
+\nofMParguments=\count296
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count297
+\MPscratchDim=\dimen169
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -374,9 +393,43 @@ Package hyperref Info: Link coloring OFF on input line 15.
 \@outlinefile=\write3
 \openout3 = `RapportMankouAugustin.out'.
 
-\c@lstlisting=\count297
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+\c@lstlisting=\count300
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(81.94394pt, 433.62pt, 81.94394pt)
+* v-part:(T,H,B)=(77.84674pt, 650.43pt, 116.77011pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=433.62pt
+* \textheight=650.43pt
+* \oddsidemargin=9.67395pt
+* \evensidemargin=9.67395pt
+* \topmargin=-31.42325pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -387,16 +440,16 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<logo.png, id=60, 256.96pt x 91.34125pt>
+<logo.png, id=64, 256.96pt x 91.34125pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 21.
-(pdftex.def)             Requested size: 172.5pt x 61.31956pt.
-<Gold_AlmaLinux.jpg, id=62, 1927.2pt x 1084.05pt>
+(pdftex.def)             Requested size: 216.81pt x 77.07037pt.
+<Gold_AlmaLinux.jpg, id=66, 1927.2pt x 1084.05pt>
 File: Gold_AlmaLinux.jpg Graphic file (type jpg)
 <use Gold_AlmaLinux.jpg>
 Package pdftex.def Info: Gold_AlmaLinux.jpg  used on input line 28.
-(pdftex.def)             Requested size: 172.5pt x 97.03096pt.
+(pdftex.def)             Requested size: 216.81pt x 121.9421pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.png> <./Gold_AlmaLi
@@ -406,16 +459,16 @@ nux.jpg>]
 \openout4 = `RapportMankouAugustin.toc'.
 
  [2]
-Overfull \hbox (0.56084pt too wide) in paragraph at lines 40--41
-\OT1/cmr/m/n/10 GNU/Linux. Nous avons le choix d'utiliser n'importe quelle dis-
-trib-u-ton RedHat-
+Overfull \hbox (1.01953pt too wide) in paragraph at lines 46--47
+[]\OT1/cmr/m/n/10 Le but est de pou-voir g^^Serer en ssh un serveur avec plein 
+d'outils, et de pou-voir in-staller/d^^Sesinstaller
  []
 
-<meme.png, id=93, 500.87125pt x 459.7175pt>
+<meme.png, id=98, 500.87125pt x 459.7175pt>
 File: meme.png Graphic file (type png)
 <use meme.png>
 Package pdftex.def Info: meme.png  used on input line 52.
-(pdftex.def)             Requested size: 172.5pt x 158.32913pt.
+(pdftex.def)             Requested size: 216.81pt x 198.99342pt.
 [3 <./meme.png>] [4{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-s
 uper-ts1.enc}] [5]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -433,34 +486,46 @@ File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
  [6] [7]
-<webservdefault.png, id=142, 968.61874pt x 642.4pt>
+<webservdefault.png, id=147, 968.61874pt x 642.4pt>
 File: webservdefault.png Graphic file (type png)
 <use webservdefault.png>
 Package pdftex.def Info: webservdefault.png  used on input line 265.
-(pdftex.def)             Requested size: 276.00105pt x 183.04669pt.
+(pdftex.def)             Requested size: 346.89731pt x 230.06795pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] [9 <./webservdefault.png>] [10] [11] [12]
-<gosling.png, id=166, 1084.05pt x 1084.05pt>
+[8]
+Overfull \hbox (1.60863pt too wide) in paragraph at lines 314--315
+[]\OT1/cmr/m/n/10 texttt/etc/vsftpd/vsftpd[]user[]conf/ sera le dossier pour le
+s con-fig-u-ra-tions d'utilisateurs virtuels
+ []
+
+[9 <./webservdefault.png>] [10] [11] [12]
+<gosling.png, id=174, 1084.05pt x 1084.05pt>
 File: gosling.png Graphic file (type png)
 <use gosling.png>
-Package pdftex.def Info: gosling.png  used on input line 351.
-(pdftex.def)             Requested size: 172.5pt x 172.49214pt.
+Package pdftex.def Info: gosling.png  used on input line 358.
+(pdftex.def)             Requested size: 216.81pt x 216.80615pt.
  [13 <./gosling.png>]
 (./RapportMankouAugustin.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `RapportMankouAugustin.out' has not changed.
-(rerunfilecheck)             Checksum: 48E9AEECB5684BFC7D8C4410C4493671;1607.
+
+Package rerunfilecheck Warning: File `RapportMankouAugustin.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `RapportMankouAugustin.out':
+(rerunfilecheck)             Before: 13150CFD460F5036DE4753A572FEAE2F;1735
+(rerunfilecheck)             After:  7135D60D036B0E94B1D60131563FCB34;2042.
  ) 
 Here is how much of TeX's memory you used:
- 11703 strings out of 477985
- 175810 string characters out of 5839380
- 1871388 words of memory out of 6000000
- 31700 multiletter control sequences out of 15000+600000
+ 12198 strings out of 477985
+ 183546 string characters out of 5839380
+ 1873388 words of memory out of 6000000
+ 32185 multiletter control sequences out of 15000+600000
  520999 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,7n,76p,454b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -474,10 +539,10 @@ type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 cm-super/sfrm1000.pfb>
-Output written on RapportMankouAugustin.pdf (13 pages, 2137699 bytes).
+Output written on RapportMankouAugustin.pdf (13 pages, 2139190 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
