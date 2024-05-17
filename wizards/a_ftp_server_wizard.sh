@@ -39,7 +39,7 @@ upload_config() {
     sudo dnf -y install libdb-utils
     #db_load -T -t hash -f login.txt login.db
     #chmod 600 login.*
-    txt2db login.txt login.db
+    txt2db /etc/vsftpd/login.txt /etc/vsftpd/login.db
     #./cleanconf.sh
     cd "$(dirname "$0")"
 }
