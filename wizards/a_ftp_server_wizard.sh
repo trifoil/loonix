@@ -35,8 +35,8 @@ install_ftp_server() {
 upload_config() {
     cp -f config_files/ftp/login.txt cd /etc/vsftpd/login.txt
     cd /etc/vsftpd/
-    sudo dnf install epel-release
-    sudo dnf install libdb-utils
+    sudo dnf -y install epel-release
+    sudo dnf -y install libdb-utils
     ./txt2db.sh login.txt login.db
     ./cleanconf.sh
     cd "$(dirname "$0")"
