@@ -38,11 +38,12 @@ upload_config() {
     sudo dnf -y install epel-release
     sudo dnf -y install libdb-utils
     ./txt2db.sh login.txt login.db
-    ./cleanconf.sh
+    #./cleanconf.sh
     cd "$(dirname "$0")"
 }
 
 txt2db() {
+    echo "test unitaire"
     if [ $# = "2" ]; then
         rm -f $2
         db_load -T -t hash -f $1 $2
