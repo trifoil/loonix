@@ -19,16 +19,15 @@ install_ftp_server() {
     cp config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
     chmod 600 /etc/vsftpd/vsftpd.conf
 
-    sudo firewall-cmd --permanent --add-port=20/tcp
-    sudo firewall-cmd --permanent --add-port=21/tcp
-    sudo firewall-cmd --reload
-    sudo firewall-cmd --list-ports
+    firewall-cmd --permanent --add-port=20/tcp
+    firewall-cmd --permanent --add-port=21/tcp
+    firewall-cmd --reload
+    firewall-cmd --list-ports
 
-    
-
+   
     echo "Press any key to continue..."
     read -n 1 -s key
-
+    # go to script location
     sleep 1
 }
 
@@ -36,6 +35,16 @@ start_ftp_server () {
     echo "Starting..."
     systemctl start vsftpd.service
     sleep 1
+}
+
+upload_config() {
+    cp config_files/ftp/login.txt cd /etc/vsftpd/login.txt
+    cd /etc/vsftpd/
+    sudo dnf install epel-release
+    sudo dnf install libdb-utils
+    db_load -T -t hash -f login.txt login.db
+    chmod 600 login.*
+    cd "$(dirname "$0")"
 }
 
 stop_ftp_server () {
