@@ -36,6 +36,7 @@ display_menu() {
 nfs_share_wizard() {
     echo "Welcome to the NFS share wizard!"
     chmod +x wizards/nfs_share_wizard.sh
+    sh wizards/nfs_share_wizard.sh
 }
 smb_share_wizard() {
     echo "Welcome to the SMB share wizard!"
