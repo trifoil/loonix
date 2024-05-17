@@ -122,8 +122,8 @@
 	\begin{itemize}
 		\item Augustin
 		\begin{itemize}
-			\item Rapport (en LaTex, bien sûr)
-			\item Menu TUI (pas jetair)
+			\item Rapport
+			\item Menu TUI
 			\item Serveur Web
 			\item Serveur SQL
 			\item Serveur FTP 
@@ -132,9 +132,10 @@
 		\end{itemize}
 		\item Mankou
 		\begin{itemize}
-			\item SSH
+			\item Connexion SSH
 			\item Serveur NTP
-			\item Serveur 
+			\item Serveur DNS
+			\item Service de Backup
 		\end{itemize}
 	\end{itemize}
 	
@@ -145,61 +146,64 @@
 	
 	
 	\section{Code}
-	\subsection{Introduction au Bash}
-	Comme nous devons apprendre le Bash pour les scripts, voici une petite synthèse simplifiée.
+%	\subsection{Introduction au Bash}
+%	Comme nous devons apprendre le Bash pour les scripts, voici une petite %synthèse simplifiée.
+%	
+%		Un code Bash doit toujours commencer par :
+%	\begin{lstlisting}
+%	#!/bin/bash
+%	\end{lstlisting}		
 	
-		Un code Bash doit toujours commencer par :
-	\begin{lstlisting}
-	#!/bin/bash
-	\end{lstlisting}		
-	
-	Pour afficher du texte, on utiliser la commande "echo" :
-	\begin{lstlisting}
-	echo "Hello, world!"
-	\end{lstlisting}		
+%	Pour afficher du texte, on utiliser la commande "echo" :
+%	\begin{lstlisting}
+%	echo "Hello, world!"
+%	\end{lstlisting}		
 
 	
-	\begin{center}
-		Une variable va se déclarer comme ceci :
-	\end{center}
-	\begin{lstlisting}
-name="John"
-age=30
-	\end{lstlisting}
+%	\begin{center}
+%		Une variable va se déclarer comme ceci :
+%	\end{center}
+%	\begin{lstlisting}
+%name="John"
+%age=30
+%	\end{lstlisting}
 
-	\begin{center}
-On accède à sa valeur comme ceci :
-\end{center}
+%	\begin{center}
+%On accède à sa valeur comme ceci :
+%\end{center}
 
-\begin{lstlisting}[language=bash, label={lst:bash-script}]
-# Access and print variables
-echo "Name: $name"
-echo "Age: $age"
+%\begin{lstlisting}[language=bash, label={lst:bash-script}]
+%# Access and print variables
+%echo "Name: $name"
+%echo "Age: $age"
 
-# You can also use the curly braces syntax
-echo "Name: ${name}"
-echo "Age: ${age}"
-\end{lstlisting}
+%# You can also use the curly braces syntax
+%echo "Name: ${name}"
+%echo "Age: ${age}"
+%\end{lstlisting}
 
-\begin{center}
-	Une condition va s'écrire comme ceci :
-\end{center}
+%\begin{center}
+%	Une condition va s'écrire comme ceci :
+%\end{center}
 	
-\begin{lstlisting}[language=bash, label={lst:bash-script}]
-if [ condition ]; then
-# Commandes executees si condition vraie
-else
-# Commandes executees si condition fausse
-fi
-
-\end{lstlisting}
+%\begin{lstlisting}[language=bash, label={lst:bash-script}]
+%if [ condition ]; then
+%# Commandes executees si condition vraie
+%else
+%# Commandes executees si condition fausse
+%fi
+%
+%\end{lstlisting}
 	
 	\subsection{Menu TUI}
 	\subsubsection{Introduction}
+	Nous avons besoin d'un menu qui reprenne la somme de tout notre travail. Le menu principal en TUI est un simple menu permettant de choisir le script concernant une manipulation spécifique d'un ou plusieurs services destiné(s) au serveur. Tout cela en une seule ligne de commande.
+
 	\subsubsection{Explications}
+	Le contenu du menu est connu à l'avance, nous pouvons donc imprimer chaque ligne de sélection de choix à l'écran.
+	Une boucle maintient le menu à l'écran et regarde si une option est entrée. Si elle est valide, elle fait un chmod +x sur le script concerné,et le lance.
 	\subsubsection{Utilisation du script}
-	Le menu principal en TUI est un simple menu permettant de choisir le script concernant une manipulation spécifique d'un ou plusieurs services destiné(s) au serveur.
-	Il affiche les options dans un ordre prédéfini, sélectionnables par un nombre à partir de 0.
+L'utilisation du script est assez explicite, il suffit de lire la liste des options et sélectionner le caractère correspondant. Etant assez simple, le menu est également robuste et ne requiert pas de précautions d'usage particulières.
 	\subsection{Partage SAMBA}
 	\subsubsection{Introduction}
 	\subsubsection{Explications}
@@ -259,7 +263,7 @@ fi
 	
 	\subsection{Serveur Web}
 	\subsubsection{Introduction}
-	Le déploiement d'un serveur web sous alma (ou fedora) est décrit dans cet \href{https://docs.fedoraproject.org/en-US/fedora-server/services/httpd-basic-setup/}{article}.
+	Le déploiement d'un serveur web sous alma (ou fedora) est décrit dans cet \href{https://docs.fedoraproject.org/en-US/fedora-server/services/httpd-basic-setup/}{\underline{article}}.
 	
 	\subsubsection{Explications}	
 		

@@ -24,6 +24,11 @@ install_ftp_server() {
     sudo firewall-cmd --reload
     sudo firewall-cmd --list-ports
 
+    
+
+    echo "Press any key to continue..."
+    read -n 1 -s key
+
     sleep 1
 }
 
