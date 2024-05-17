@@ -19,8 +19,11 @@ install_ftp_server() {
     mv config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
     chmod 600 /etc/vsftpd/vsftpd.conf
 
+    sudo firewall-cmd --permanent --add-port=20/tcp
+    sudo firewall-cmd --permanent --add-port=21/tcp
+    sudo firewall-cmd --reload
+    sudo firewall-cmd --list-ports
     
-
     sleep 1
 }
 
