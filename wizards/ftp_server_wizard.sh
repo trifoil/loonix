@@ -18,6 +18,9 @@ install_ftp_server() {
     mv /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.default
     mv config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
     chmod 600 /etc/vsftpd/vsftpd.conf
+
+    
+
     sleep 1
 }
 
