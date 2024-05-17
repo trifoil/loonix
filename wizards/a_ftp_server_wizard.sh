@@ -8,7 +8,7 @@ display_menu() {
     echo "| 4. Disable ftp server                    |"
     echo "| 5. Show ftp server status                |"
     echo "| 6. Directory attribution                 |"
-    echo "| 7. test"
+    echo "| 7. Load config files                     |"
     echo "| q. Quit                                  |"
 }
 
@@ -35,12 +35,12 @@ install_ftp_server() {
 upload_config() {
     cp -f config_files/ftp/login.txt /etc/vsftpd/login.txt
     cd /etc/vsftpd/
-    #sudo dnf -y install epel-release
     sudo dnf -y install libdb-utils
-    #db_load -T -t hash -f login.txt login.db
-    #chmod 600 login.*
     txt2db /etc/vsftpd/login.txt /etc/vsftpd/login.db
     cleanconf
+    cp -f config_files/ftp/pam/vsftpd /etc/pam.d/vsftpd
+    systemctl restart vsftpd.service
+
     echo "Press any key to continue..."
     read -n 1 -s key
 }
