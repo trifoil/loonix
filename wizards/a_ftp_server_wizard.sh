@@ -40,8 +40,7 @@ upload_config() {
     #db_load -T -t hash -f login.txt login.db
     #chmod 600 login.*
     txt2db /etc/vsftpd/login.txt /etc/vsftpd/login.db
-    #./cleanconf.sh
-    cd "$(dirname "$0")"
+    cleanconf
     echo "Press any key to continue..."
     read -n 1 -s key
 }
