@@ -8,6 +8,7 @@ display_menu() {
     echo "| 4. Disable ftp server                    |"
     echo "| 5. Show ftp server status                |"
     echo "| 6. Directory attribution                 |"
+    echo "| 7. test"
     echo "| q. Quit                                  |"
 }
 
@@ -15,7 +16,7 @@ install_ftp_server() {
     echo "Installing"
     dnf -y install vsftpd
     systemctl enable vsftpd.service
-    mv /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.default
+    mv -f /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.default
     cp config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
     chmod 600 /etc/vsftpd/vsftpd.conf
 
@@ -31,20 +32,76 @@ install_ftp_server() {
     sleep 1
 }
 
+upload_config() {
+    cp -f config_files/ftp/login.txt cd /etc/vsftpd/login.txt
+    cd /etc/vsftpd/
+    sudo dnf install epel-release
+    sudo dnf install libdb-utils
+    ./txt2db.sh login.txt login.db
+    ./cleanconf.sh
+    cd "$(dirname "$0")"
+}
+
+txt2db() {
+    if [ $# = "2" ]; then
+        rm -f $2
+        db_load -T -t hash -f $1 $2
+        chmod 600 /etc/vsftpd/login.*
+        echo "Base crée"
+        lignes=$(cat $1)
+        nb=1
+        for ligne in $lignes
+        do
+            if [ $(($nb%2)) -ne 0  ];
+            then
+                if [ ! -e vsftpd_user_conf/$ligne ];
+                then
+                    touch /etc/vsftpd/vsftpd_user_conf/$ligne
+                    echo "fichier $ligne crée"
+                fi
+            fi
+            nb=$(($nb+1))
+        done
+    else
+        echo "Il faut donner le fichier d'entrée et le fichier de sortie"
+    fi
+}
+
+cleanconf() {
+    fichiers=$(ls /etc/vsftpd/vsftpd_user_conf)
+    users=""
+    lignes=$(cat /etc/vsftpd/login.txt)
+    nb=1
+    for ligne in $lignes
+    do
+        if [ $(($nb%2)) -ne 0  ];
+        then
+            users="$users $ligne"
+        fi
+    nb=$(($nb+1))
+    done
+    for conf in $fichiers
+    do
+    found=0
+    for user in $users
+    do
+        if [ $conf = $user ];
+        then
+            found="1"
+        fi
+    done
+    if [ $found != "1" ];
+    then
+        rm -f vsftpd_user_conf/$conf
+        echo "Fichier $conf supprimé"
+    fi
+    done
+}
+
 start_ftp_server () {
     echo "Starting..."
     systemctl start vsftpd.service
     sleep 1
-}
-
-upload_config() {
-    cp config_files/ftp/login.txt cd /etc/vsftpd/login.txt
-    cd /etc/vsftpd/
-    sudo dnf install epel-release
-    sudo dnf install libdb-utils
-    db_load -T -t hash -f login.txt login.db
-    chmod 600 login.*
-    cd "$(dirname "$0")"
 }
 
 stop_ftp_server () {
@@ -86,6 +143,7 @@ main() {
             4) disable_ftp_server ;;
             5) show_ftp_status ;;
             6) directory_attribution ;;
+            7) upload_config ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
