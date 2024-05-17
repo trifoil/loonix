@@ -19,14 +19,12 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\textwidth]{logo.png}
-
 		\label{fig:logoheh}
 	\end{figure}
 	
-		\begin{figure}[h]
+	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\textwidth]{Gold\_AlmaLinux.jpg}
-		
+		\includegraphics[width=0.5\textwidth]{Gold\_AlmaLinux.jpg}	
 		\label{fig:logoheh}
 	\end{figure}
 	
@@ -36,27 +34,31 @@
 	\tableofcontents
 	\newpage
 	
+	
+	
+	
+	
 	\section{Introduction}
 	Dans le cadre de ce projet, nous avons pour objectif de configurer un serveur GNU/Linux. Nous avons le choix d'utiliser n'importe quelle distributon RedHat-like, par exemple Fedora, ou bien Alma, sur laquelle nous avons travaillé en cours. Ce point est important, pour pouvoir poser une question précise au professeur en cas de souci.
 	
-	Notre choix se porte donc sur Alma Linux, mais les scripts fonctionnant sous Alma fonctionnent théoriquement exactement de la même manière sous Fedora Linux.
+	Notre choix se porte donc sur Alma Linux, mais les scripts fonctionnant sous Alma fonctionnent théoriquement exactement de la même manière sous Fedora Linux et RHEL.
 	
 	L'OS fonctionnera dans une machine virtuelle, hébergée sur un HYPER-V de Windows. De cette manière, aussi bien un utilisateur Windows que linux pourra accéder aux différents services.
 	
-	Le but est de pouvoir gérer en ssh un serveur avec plein d'outils, et de pouvoir installer/désinstaller les services à souhait, diminuant ainsi la surface d'attaque.
+	Le but est de pouvoir gérer en ssh un serveur avec plein d'outilsutiles, et de pouvoir installer/désinstaller les services à souhait, diminuant ainsi la surface d'attaque.
+	
+	Nous devons donc gérer des services de partage de fichiers, serveur DNS, serveur Web ainsi que serveur temps.
+	
+	La dernière étape sera de sécuriser le serveur correctement, notamment en utilisant SELinux, et en définissant les polices d'utilisation correctes.
 	
 	\begin{center}Me when Linux on Windows :
 	\end{center}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\textwidth]{meme.png}
-		
 		\label{fig:meme}
 	\end{figure}
 	\newpage
-	
-	
-	
 	
 	\subsection{Consignes professeur}
 	
@@ -78,7 +80,6 @@
 			\item Maj, désactiver l’inutile.
 			\item Antivirus, firewall, ….
 		\end{itemize}
-		\newpage
 		\item Vous êtes l’administrateur de ce serveur agissez en conséquence :
 		\begin{itemize}
 			\item Documenter
@@ -94,46 +95,69 @@
 		
 	\end{itemize}
 	
+	\newpage	
+	
 	\subsection{Roadmap}
 	L'ensemble sera scripté pour coller à l'ensemble des cas d'utilisation. Voici donc la liste prévue de ces scripts (pour installer/désinstaller):
-			\begin{itemize}
-				\item Menu de sélection
-				\item SSH config wizard
-				\item File sharing install wizard
-				\item Web server install wizard
-				\item FTP server install wizard
-				\item MySQL server 
-				\item DNS server (+ cache + création de zone + serveur cache)
-				\item Time server
-				\item Sécurisation
-				\item Backup
-				\item Updates
-				\item Partitionnement
+		\begin{itemize}
+			\item Menu de sélection
+			\item SSH config wizard
+			\item File sharing install wizard
+			\item Web server install wizard
+			\item FTP server install wizard
+			\item MySQL server 
+			\item DNS server (+ cache + création de zone + serveur cache)
+			\item Time server
+			\item Sécurisation
+			\item Backup
+			\item Updates
+			\item Partitionnement
 		\end{itemize}
 		Il est donc indispensable de se former au BASH, afin de savoir faire un bon TUI, ainsi que des commandes conditionnelles, selon les features qui sont/ne sont pas déjà installées.
+		
+		Le service SSH est indépendant des autres services. Le DNS, time server également.
+		
+		Cependant, les Serveurs Web, SQL et FTP doivent fonctionner en symbiose. C'est aussi le cas du NFS et SMB. Ce sera donc une personne qui s'occupera de ces services deux à deux.
 	\subsection{Répartition des tâches}
 	\begin{itemize}
 		\item Augustin
 		\begin{itemize}
 			\item Rapport (en LaTex, bien sûr)
 			\item Menu TUI (pas jetair)
+			\item Serveur Web
+			\item Serveur SQL
+			\item Serveur FTP 
+			\item Serveur SMB
+			\item Serveur NFS
 		\end{itemize}
 		\item Mankou
 		\begin{itemize}
-			\item 
+			\item SSH
+			\item Serveur NTP
+			\item Serveur 
 		\end{itemize}
 	\end{itemize}
+	
+	
+	
+	
+	
+	
+	
 	\section{Code}
-	\subsection{Intro au Bash}
+	\subsection{Introduction au Bash}
 	Comme nous devons apprendre le Bash pour les scripts, voici une petite synthèse simplifiée.
 	
-	\begin{center}
-	Un code Bash doit toujours commencer par :
-\end{center}
-\begin{lstlisting}[language=bash, label={lst:bash-script}]
-#!/bin/bash
-echo "Hello, world!"
-\end{lstlisting}
+		Un code Bash doit toujours commencer par :
+	\begin{lstlisting}
+	#!/bin/bash
+	\end{lstlisting}		
+	
+	Pour afficher du texte, on utiliser la commande "echo" :
+	\begin{lstlisting}
+	echo "Hello, world!"
+	\end{lstlisting}		
+
 	
 	\begin{center}
 		Une variable va se déclarer comme ceci :
@@ -171,9 +195,15 @@ fi
 \end{lstlisting}
 	
 	\subsection{Menu TUI}
+	\subsubsection{Introduction}
+	\subsubsection{Explications}
+	\subsubsection{Utilisation du script}
 	Le menu principal en TUI est un simple menu permettant de choisir le script concernant une manipulation spécifique d'un ou plusieurs services destiné(s) au serveur.
 	Il affiche les options dans un ordre prédéfini, sélectionnables par un nombre à partir de 0.
 	\subsection{Partage SAMBA}
+	\subsubsection{Introduction}
+	\subsubsection{Explications}
+
 	Premièrement le script va installer le package "samba", si ce n'est pas déjà fait.
 	Il va ensuite donner le choix à l'utilisateur pour gérer son partage samba.
 	 
@@ -204,11 +234,17 @@ fi
 			\item Changer le mot de passe
 		\end{itemize}	
 	\end{itemize}
+	\subsubsection{Utilisation du script}
+
 	\subsection{Partage NFS}
+	\subsubsection{Introduction}
+
+	\subsubsection{Explications}
 	Concu pour partager des fichiers entre OS de type Unix, 
 	
 	Montage d'un FS samba sous Unix :
 	\texttt{mount -t smbfs -o} (voir annexes du cours de linux P78)
+	\subsubsection{Utilisation du script}
 	
 	\newpage
 	
@@ -222,7 +258,11 @@ fi
 	
 	
 	\subsection{Serveur Web}
+	\subsubsection{Introduction}
 	Le déploiement d'un serveur web sous alma (ou fedora) est décrit dans cet \href{https://docs.fedoraproject.org/en-US/fedora-server/services/httpd-basic-setup/}{article}.
+	
+	\subsubsection{Explications}	
+		
 	Deux subdirectories sont utiles pour la configuration :
 	\begin{itemize}
 		\item \texttt{/etc/httpd/conf.d}
@@ -278,8 +318,10 @@ fi
 	
 	\newpage
 	
-	
-	\subsection{FTP server}
+	\subsection{Serveur SQL}
+	\subsubsection{Introduction}
+
+	\subsection{Serveur FTP}
 	\subsubsection{Introduction}
 	Le service FTP a été configuré à l'aide de cet \href{https://doc.fedora-fr.org/wiki/Vsftpd_:_Installation_et_configuration}{article de référence}.
 
@@ -302,17 +344,26 @@ fi
 
 	Dans ce fichier de configuration, on va choisir ces options :
 	\begin{itemize}
-	\item On écoute sur le port 21/tcp ;
-    \item On est en standalone ;
+	\item On écoute sur le port 21/tcp 
+    \item On est en standalone 
     
 Le mode standalone indique que le serveur est autonome, et que le service tourne en permanence. 
-    \item On refuse les utilisateurs anonymes ;
-    \item On accepte les utilisateurs système et les utilisateurs virtuels ;
-    \item Les utilisateurs virtuels sont mappés sur l'utilisateur système "ftp" ;
-    \item Les utilisateurs n'ont aucun droit d'écriture par défaut ;
-    \item Ils sont chrootés dans /var/ftp/ ;
-    \item texttt{/etc/vsftpd/vsftpd\_user\_conf/} sera le dossier pour les configurations d'utilisateurs virtuels ;
-    \item texttt{/etc/vsftpd/user\_list} contiendra la liste des utilisateurs refusés (pour lesquels on ne demandera même pas le mot de passe).
+    \item On refuse les utilisateurs anonymes 
+    \item On accepte les utilisateurs système et les utilisateurs virtuels 
+    \item Les utilisateurs virtuels sont mappés sur l'utilisateur système "ftp" 
+    \item Les utilisateurs n'ont aucun droit d'écriture par défaut 
+    \item Ils sont chrootés dans:
+    \begin{center}
+		/var/ftp/
+	\end{center}
+    \item Le dossier pour les configurations d'utilisateurs virtuels :
+    \begin{center}
+ 		/etc/vsftpd/vsftpd\_user\_conf/
+	\end{center}
+    \item La liste des utilisateurs refusés (pour lesquels on ne demandera même pas le mot de passe) sera contenue dans :
+	\begin{center}
+		/etc/vsftpd/user\_list
+	\end{center}		
 	\end{itemize}
 	
 	\subsubsection{Utilisation du script}
