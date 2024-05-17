@@ -42,6 +42,8 @@ upload_config() {
     txt2db /etc/vsftpd/login.txt /etc/vsftpd/login.db
     #./cleanconf.sh
     cd "$(dirname "$0")"
+    echo "Press any key to continue..."
+    read -n 1 -s key
 }
 
 txt2db() {
@@ -68,6 +70,8 @@ txt2db() {
     else
         echo "Il faut donner le fichier d'entrée et le fichier de sortie"
     fi
+    echo "Press any key to continue..."
+    read -n 1 -s key
 }
 
 cleanconf() {
