@@ -33,11 +33,15 @@ display_menu() {
     echo "|-----------------------------------------------------------------------|"
     echo ""
 }
+
+
+# Functions to launch the scripts
 nfs_share_wizard() {
     echo "Welcome to the NFS share wizard!"
     chmod +x wizards/a_nfs_share_wizard.sh
     sh wizards/a_nfs_share_wizard.sh
 }
+
 smb_share_wizard() {
     echo "Welcome to the SMB share wizard!"
     chmod +x wizards/a_smb_share_wizard.sh
@@ -76,7 +80,6 @@ main() {
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
-        ##clear
     done
 }
 
