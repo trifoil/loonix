@@ -45,7 +45,6 @@ upload_config() {
 }
 
 txt2db() {
-    echo "test unitaire"
     if [ $# = "2" ]; then
         rm -f $2
         db_load -T -t hash -f $1 $2
