@@ -36,7 +36,7 @@ upload_config() {
     sudo dnf -y install libdb-utils
     mkdir /etc/vsftpd/vsftpd_user_conf
     txt2db /etc/vsftpd/login.txt /etc/vsftpd/login.db
-    #cleanconf
+    cleanconf
     cp -f config_files/ftp/pam/vsftpd /etc/pam.d/vsftpd
     systemctl restart vsftpd.service
     echo "Press any key to continue..."
