@@ -3,15 +3,15 @@ display_menu() {
     echo "||||||||||||||||||||||||||||||||||||||||||||"
     echo "|||||     What do you want to do?      |||||"
     echo "||||||||||||||||||||||||||||||||||||||||||||"
-    echo "| 0. Install and enable ftp server (vsftpd)|"
-    echo "| 1. Start ftp server                      |"
-    echo "| 2. Stop ftp server                       |"
-    echo "| 3. Enable ftp server                     |"    
-    echo "| 4. Disable ftp server                    |"
-    echo "| 5. Show ftp server status                |"
-    echo "| 6. Directory attribution                 |"
-    echo "| 7. Load config files                     |"
-    echo "| 8. PAM config                            |"
+    echo "| ❶. Install and enable ftp server (vsftpd)|"
+    echo "| ❷. Start ftp server                      |"
+    echo "| ❸. Stop ftp server                       |"
+    echo "| ❹. Enable ftp server                     |"    
+    echo "| ❺. Disable ftp server                    |"
+    echo "| ❻. Show ftp server status                |"
+    echo "| ❼. Directory attribution                 |"
+    echo "| ❽. Load config files                     |"
+    echo "| ❾. PAM config                            |"
     echo "| q. Quit                                  |"
 }
 
@@ -156,15 +156,15 @@ main() {
         display_menu
         read -p "Enter your choice: " choice
         case $choice in
-            0) install_ftp_server ;;
-            1) start_ftp_server ;;
-            2) stop_ftp_server ;;
-            3) enable_ftp_server ;;
-            4) disable_ftp_server ;;
-            5) show_ftp_status ;;
-            6) directory_attribution ;;
-            7) upload_config ;;
-            8) pam_config ;;
+            1) install_ftp_server ;;
+            2) start_ftp_server ;;
+            3) stop_ftp_server ;;
+            4) enable_ftp_server ;;
+            5) disable_ftp_server ;;
+            6) show_ftp_status ;;
+            7) directory_attribution ;;
+            8) upload_config ;;
+            9) pam_config ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
