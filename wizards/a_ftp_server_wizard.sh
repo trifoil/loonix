@@ -9,6 +9,7 @@ display_menu() {
     echo "| 5. Show ftp server status                |"
     echo "| 6. Directory attribution                 |"
     echo "| 7. Load config files                     |"
+    echo "| 8. PAM config                            |"
     echo "| q. Quit                                  |"
 }
 
@@ -104,6 +105,11 @@ cleanconf() {
     echo "cleanconf done"
     echo "Press any key to continue..."
     read -n 1 -s key
+}
+
+pam8config() {
+    cp -f config_files/ftp/pam/vsftpd /etc/pam.d/vsftpd
+    systemctl restart vsftpd.service
 }
 
 start_ftp_server () {
