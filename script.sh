@@ -66,6 +66,12 @@ ntp_server_wizard() {
     sh wizards/a_ntp_server_wizard.sh
 }
 
+dns_server_wizard() {
+    echo "Welcome to the DNS server wizard!"
+    chmod +x wizards/m_dns_server_wizard.sh
+    sh wizards/m_dns_server_wizard.sh
+}
+
 # Main function
 main() {
     while true; do
@@ -76,6 +82,7 @@ main() {
             1) smb_share_wizard ;;
             2) web_server_wizard ;;
             3) ftp_server_wizard ;;
+            5) dns_server_wizard ;;
             6) ntp_server_wizard ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;

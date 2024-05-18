@@ -1,6 +1,5 @@
 #!/bin/bash
 
+sudo dnf -y install bind bind-utils 
 
-
-sudo dnf install bind bind-utils -y
-
+cp -f config_files/dns/named.conf /etc/named.conf
