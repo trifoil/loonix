@@ -1,8 +1,8 @@
 #!/bin/bash
 display_menu() {
-    echo "||||||||||||||||||||||||||||||||||||||||||||"
-    echo "|||||     What do you want to do?      |||||"
-    echo "||||||||||||||||||||||||||||||||||||||||||||"
+    echo "|-------------------------------------------|"
+    echo "|         What do you want to do?           |"
+    echo "|-------------------------------------------|"
     echo "| ❶. Install and enable ftp server (vsftpd)|"
     echo "| ❷. Start ftp server                      |"
     echo "| ❸. Stop ftp server                       |"
