@@ -107,9 +107,12 @@ cleanconf() {
     read -n 1 -s key
 }
 
-pam8config() {
+pam_config() {
     cp -f config_files/ftp/pam/vsftpd /etc/pam.d/vsftpd
     systemctl restart vsftpd.service
+    echo "Done"
+    echo "Press any key to continue..."
+    read -n 1 -s key
 }
 
 start_ftp_server () {
@@ -160,6 +163,7 @@ main() {
             5) show_ftp_status ;;
             6) directory_attribution ;;
             7) upload_config ;;
+            8) pam_config ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
