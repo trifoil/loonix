@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#source: https://doc.fedora-fr.org/wiki/Vsftpd_:_Installation_et_configuration
+
 display_menu() {
     echo "|-------------------------------------------|"
     echo "|         What do you want to do?           |"
@@ -16,7 +19,6 @@ display_menu() {
     echo "| q. Quit                                   |"
     echo "|-------------------------------------------|"
     echo ""
-
 }
 
 install_ftp_server() {
