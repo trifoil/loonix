@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  17 MAY 2024 03:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  18 MAY 2024 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -338,9 +338,6 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `fig:logoheh' multiply defined.
 
-
-LaTeX Warning: Label `lst:bash-script' multiply defined.
-
 )
 \openout1 = `RapportMankouAugustin.aux'.
 
@@ -437,12 +434,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<logo.png, id=124, 256.96pt x 91.34125pt>
+<logo.png, id=148, 256.96pt x 91.34125pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 21.
 (pdftex.def)             Requested size: 216.81pt x 77.07037pt.
-<Gold_AlmaLinux.jpg, id=126, 1927.2pt x 1084.05pt>
+<Gold_AlmaLinux.jpg, id=150, 1927.2pt x 1084.05pt>
 File: Gold_AlmaLinux.jpg Graphic file (type jpg)
 <use Gold_AlmaLinux.jpg>
 Package pdftex.def Info: Gold_AlmaLinux.jpg  used on input line 27.
@@ -461,42 +458,72 @@ Overfull \hbox (24.40846pt too wide) in paragraph at lines 48--49
 d'outilsutiles, et de pou-voir in-staller/d^^Sesinstaller
  []
 
-<meme.png, id=173, 500.87125pt x 459.7175pt>
+<meme.png, id=204, 500.87125pt x 459.7175pt>
 File: meme.png Graphic file (type png)
 <use meme.png>
 Package pdftex.def Info: meme.png  used on input line 58.
 (pdftex.def)             Requested size: 216.81pt x 198.99342pt.
 [3 <./meme.png>] [4{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-s
 uper-ts1.enc}] [5]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-80.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.235 ...pically located at /var/cache/bind/named_
+                                                  dump.db for Debian-based s...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 180.
- [6] [7]
-<webservdefault.png, id=224, 968.61874pt x 642.4pt>
+! Missing $ inserted.
+<inserted text> 
+                $
+l.236 	
+       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.236 	
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (49.10838pt too wide) in paragraph at lines 231--236
+\OT1/cmr/m/n/10 sudo rndc dumpdb -cache1. The cache is typ-i-cally lo-cated at 
+/var/cache/bind/named$[]\OML/cmm/m/it/10 ump:dbforDebian \OMS/cmsy/m/n/10 ^^@
+ []
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.236 	
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[6] [7]
+<webservdefault.png, id=236, 968.61874pt x 642.4pt>
 File: webservdefault.png Graphic file (type png)
 <use webservdefault.png>
-Package pdftex.def Info: webservdefault.png  used on input line 305.
+Package pdftex.def Info: webservdefault.png  used on input line 343.
 (pdftex.def)             Requested size: 346.89731pt x 230.06795pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8] [9 <./webservdefault.png>] [10] [11] [12]
-<gosling.png, id=248, 1084.05pt x 1084.05pt>
+<gosling.png, id=260, 1084.05pt x 1084.05pt>
 File: gosling.png Graphic file (type png)
 <use gosling.png>
-Package pdftex.def Info: gosling.png  used on input line 409.
+Package pdftex.def Info: gosling.png  used on input line 452.
 (pdftex.def)             Requested size: 216.81pt x 216.80615pt.
  [13 <./gosling.png>]
 (./RapportMankouAugustin.aux)
@@ -504,30 +531,32 @@ Package pdftex.def Info: gosling.png  used on input line 409.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `RapportMankouAugustin.out' has not changed.
-(rerunfilecheck)             Checksum: F03FF37CFBBCC620F4CCA6E5EF63C1E4;3887.
+(rerunfilecheck)             Checksum: 84065C13E1AF3B01249C264070AD0BAA;4717.
  ) 
 Here is how much of TeX's memory you used:
- 12224 strings out of 477985
- 184085 string characters out of 5839380
- 1872388 words of memory out of 6000000
- 32197 multiletter control sequences out of 15000+600000
+ 11824 strings out of 477985
+ 180353 string characters out of 5839380
+ 1863388 words of memory out of 6000000
+ 31819 multiletter control sequences out of 15000+600000
  520999 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,7n,76p,454b,1414s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,76p,384b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-cm-super/sfrm1000.pfb>
-Output written on RapportMankouAugustin.pdf (13 pages, 2142763 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm
+1000.pfb>
+Output written on RapportMankouAugustin.pdf (13 pages, 2158737 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 287 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 314 words of extra memory for PDF output out of 10000 (max. 10000000)
 

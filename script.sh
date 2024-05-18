@@ -33,31 +33,43 @@ display_menu() {
     echo "|-----------------------------------------------------------------------|"
     echo ""
 }
+
+
+# Functions to launch the scripts
 nfs_share_wizard() {
     echo "Welcome to the NFS share wizard!"
-    chmod +x wizards/nfs_share_wizard.sh
+    chmod +x wizards/a_nfs_share_wizard.sh
+    sh wizards/a_nfs_share_wizard.sh
 }
+
 smb_share_wizard() {
     echo "Welcome to the SMB share wizard!"
-    chmod +x wizards/smb_share_wizard.sh
-    sh wizards/smb_share_wizard.sh
+    chmod +x wizards/a_smb_share_wizard.sh
+    sh wizards/a_smb_share_wizard.sh
 }
 
 web_server_wizard() {
     echo "Welcome to the web server wizard!"
-    chmod +x wizards/web_server_wizard.sh
-    sh wizards/web_server_wizard.sh
+    chmod +x wizards/a_web_server_wizard.sh
+    sh wizards/a_web_server_wizard.sh
 }
 
 ftp_server_wizard() {
     echo "Welcome to the ftp server wizard!"
-    chmod +x wizards/ftp_server_wizard.sh
-    sh wizards/ftp_server_wizard.sh
+    chmod +x wizards/a_ftp_server_wizard.sh
+    sh wizards/a_ftp_server_wizard.sh
 }
 
 ntp_server_wizard() {
     echo "Welcome to the NTP server wizard!"
-    chmod +x wizards/ntp_server_wizard.sh
+    chmod +x wizards/a_ntp_server_wizard.sh
+    sh wizards/a_ntp_server_wizard.sh
+}
+
+dns_server_wizard() {
+    echo "Welcome to the DNS server wizard!"
+    chmod +x wizards/m_dns_server_wizard.sh
+    sh wizards/m_dns_server_wizard.sh
 }
 
 # Main function
@@ -70,11 +82,11 @@ main() {
             1) smb_share_wizard ;;
             2) web_server_wizard ;;
             3) ftp_server_wizard ;;
+            5) dns_server_wizard ;;
             6) ntp_server_wizard ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
-        ##clear
     done
 }
 
