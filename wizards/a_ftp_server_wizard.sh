@@ -12,7 +12,10 @@ display_menu() {
     echo "| ❼. Directory attribution                 |"
     echo "| ❽. Load config files                     |"
     echo "| ❾. PAM config                            |"
-    echo "| q. Quit                                  |"
+    echo "|-------------------------------------------|"
+    echo "| q. Quit                                   |"
+    echo "|-------------------------------------------|"
+
 }
 
 install_ftp_server() {
