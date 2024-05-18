@@ -33,13 +33,12 @@ install_ftp_server() {
 
 upload_config() {
     cp -f config_files/ftp/login.txt /etc/vsftpd/login.txt
-    cd /etc/vsftpd/
     sudo dnf -y install libdb-utils
+    mkdir /etc/vsftpd/vsftpd_user_conf
     txt2db /etc/vsftpd/login.txt /etc/vsftpd/login.db
     #cleanconf
     cp -f config_files/ftp/pam/vsftpd /etc/pam.d/vsftpd
     systemctl restart vsftpd.service
-
     echo "Press any key to continue..."
     read -n 1 -s key
 }
@@ -133,6 +132,8 @@ disable_ftp_server () {
 
 show_ftp_status () {
     systemctl status vsftpd.service
+        sleep 1
+
 }
 
 directory_attribution () {
