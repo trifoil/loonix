@@ -36,7 +36,7 @@ testing() {
     systemctl restart smb
     systemctl restart nmb
 
-    # chcon -t samba_share_t /share
+    #chcon -t samba_share_t /share
 
     testparm
 
