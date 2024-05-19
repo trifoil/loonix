@@ -27,12 +27,14 @@ display_menu() {
 }
 
 testing() {
-    sudo mkdir -p /srv/samba/shared
-    sudo chown -R nobody:nobody /srv/samba/shared
-    sudo chmod -R 0775 /srv/samba/shared
 
-    sudo systemctl restart smb
-    sudo systemctl restart nmb
+    cp -f config_files/smb/smb.conf /etc/samba/smb.conf
+    mkdir -p /srv/samba/shared
+    chown -R nobody:nobody /srv/samba/shared
+    chmod -R 0775 /srv/samba/shared
+
+    systemctl restart smb
+    systemctl restart nmb
 
     testparm
     echo "Press any key to continue..."
@@ -40,13 +42,13 @@ testing() {
 }
 
 install_samba() {
-    sudo dnf update -y
+    dnf update -y
     dnf -y install samba samba-client
-    sudo systemctl enable smb --now
-    sudo systemctl enable nmb --now    
+    systemctl enable smb --now
+    systemctl enable nmb --now    
 
-    sudo firewall-cmd --permanent --add-service=samba
-    sudo firewall-cmd --reload
+    firewall-cmd --permanent --add-service=samba
+    firewall-cmd --reload
 
     echo "Press any key to continue..."
     read -n 1 -s key
@@ -63,7 +65,7 @@ display_unix_users() {
 display_smb_users() {
 clear
     echo "These smb users already exist :"
-    sudo pdbedit -L -w
+    pdbedit -L -w
     echo "Press any key to continue..."
     read -n 1 -s key
     echo ""
