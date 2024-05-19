@@ -4,6 +4,8 @@
 
 display_menu() {
     echo "|-------------------------------------------|"
+    echo "|            FTP server wizard              |"
+    echo "|-------------------------------------------|"
     echo "|         What do you want to do?           |"
     echo "|-------------------------------------------|"
     echo "| 1. Install and enable ftp server (vsftpd) |"
