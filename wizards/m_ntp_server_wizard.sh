@@ -16,3 +16,6 @@ sed -i "s|#allow 192.168.0.0/16|allow $ip_server|g" /etc/chrony.conf
 sed -i "s/pool 2.almalinux.pool.ntp.org iburst/$ntp_pool/g" /etc/chrony.conf
 
 systemctl restart chronyd
+
+echo "Press any key to continue..."
+read -n 1 -s key
