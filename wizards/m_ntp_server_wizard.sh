@@ -1,6 +1,9 @@
 #!/bin/bash
 clear
 
+GREEN='\e[32m'
+NC='\e[0m' # No Color
+
 display_menu() {
     echo "|-------------------------------------------|"
     echo  -e  "|            ${GREEN}NTP server wizard${NC}              |"
