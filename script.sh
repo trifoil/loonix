@@ -62,8 +62,8 @@ ftp_server_wizard() {
 
 ntp_server_wizard() {
     echo "Welcome to the NTP server wizard!"
-    chmod +x wizards/a_ntp_server_wizard.sh
-    sh wizards/a_ntp_server_wizard.sh
+    chmod +x wizards/m_ntp_server_wizard.sh
+    sh wizards/m_ntp_server_wizard.sh
 }
 
 dns_server_wizard() {
