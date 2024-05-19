@@ -17,6 +17,8 @@ display_menu() {
 }
 
 setup() {
+    clear 
+
     ip_server=$(hostname -I | sed 's/ *$//')/16
     ntp_pool="server 0.pool.ntp.org iburst\\nserver 1.pool.ntp.org iburst\\nserver 2.pool.ntp.org iburst\\nserver 3.pool.ntp.org iburst"
     dnf install chrony -y
@@ -33,6 +35,7 @@ setup() {
 
 timezone_choice() {
     clear
+
     timezones=$(timedatectl list-timezones)
     echo "Available timezones:"
     PS3="Please select a timezone by number: "
@@ -58,9 +61,48 @@ timezone_choice() {
 }
 
 timezone_display() {
-    chronyc tracking
-    chronyc sources
-    cat /etc/chrony.conf
+    clear
+
+    echo "System Time and Date Information"
+    echo "--------------------------------"
+
+    echo -e "\nCurrent System Date and Time:"
+    date
+
+    echo -e "\nHardware Clock (RTC) Time:"
+    hwclock
+
+    echo -e "\nCurrent Timezone:"
+    timedatectl | grep "Time zone"
+
+    echo -e "\nTimedatectl Status:"
+    timedatectl status
+
+    echo -e "\nNTP Synchronization Status (timedatectl):"
+    timedatectl show-timesync --all
+
+    if command -v chronyc &> /dev/null; then
+        echo -e "\nChrony Tracking Information:"
+        chronyc tracking
+
+        echo -e "\nChrony Sources:"
+        chronyc sources
+
+        echo -e "\nChrony Source Statistics:"
+        chronyc sourcestats
+
+        echo -e "\nChrony NTP Data:"
+        chronyc ntpdata
+    else
+        echo -e "\nChrony is not installed or not found. Skipping chrony information."
+    fi
+
+    echo "--------------------------------"
+    echo "All time and date information displayed successfully."
+
+    # chronyc tracking
+    # chronyc sources
+    # cat /etc/chrony.conf
     echo "Press any key to exit..."
     read -n 1 -s key
 }
