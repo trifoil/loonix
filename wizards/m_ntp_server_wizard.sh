@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 
 ip_server=$(hostname -I | sed 's/ *$//')/16
 
