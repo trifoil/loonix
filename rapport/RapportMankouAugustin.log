@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  19 MAY 2024 21:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.4.10)  19 MAY 2024 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,20 +465,20 @@ Package pdftex.def Info: meme.png  used on input line 58.
 (pdftex.def)             Requested size: 216.81pt x 198.99342pt.
 [3 <./meme.png>] [4{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-s
 uper-ts1.enc}] [5] [6] [7]
-<webservdefault.png, id=213, 968.61874pt x 642.4pt>
+<webservdefault.png, id=214, 968.61874pt x 642.4pt>
 File: webservdefault.png Graphic file (type png)
 <use webservdefault.png>
-Package pdftex.def Info: webservdefault.png  used on input line 342.
+Package pdftex.def Info: webservdefault.png  used on input line 345.
 (pdftex.def)             Requested size: 346.89731pt x 230.06795pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8] [9 <./webservdefault.png>] [10] [11] [12]
-<gosling.png, id=237, 1084.05pt x 1084.05pt>
+<gosling.png, id=238, 1084.05pt x 1084.05pt>
 File: gosling.png Graphic file (type png)
 <use gosling.png>
-Package pdftex.def Info: gosling.png  used on input line 447.
+Package pdftex.def Info: gosling.png  used on input line 450.
 (pdftex.def)             Requested size: 216.81pt x 216.80615pt.
  [13 <./gosling.png>]
 (./RapportMankouAugustin.aux)
@@ -505,10 +505,10 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1000.pfb>
-Output written on RapportMankouAugustin.pdf (13 pages, 2129463 bytes).
+Output written on RapportMankouAugustin.pdf (13 pages, 2129706 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
+ 303 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
  52 named destinations out of 1000 (max. 500000)
  282 words of extra memory for PDF output out of 10000 (max. 10000000)
 
