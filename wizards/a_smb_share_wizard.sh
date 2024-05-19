@@ -115,6 +115,7 @@ main() {
             4) remove_smb_user ;;
             5) remove_all_smb_users ;;
             8) install_samba ;;
+            9) testing ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
