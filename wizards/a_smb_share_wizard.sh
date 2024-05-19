@@ -29,14 +29,17 @@ display_menu() {
 testing() {
 
     cp -f config_files/smb/smb.conf /etc/samba/smb.conf
-    mkdir -p /srv/samba/shared
-    chown -R nobody:nobody /srv/samba/shared
-    chmod -R 0775 /srv/samba/shared
+    mkdir -p /srv/filesharing
+    chown -R nobody:nobody /srv/filesharing
+    chmod -R 0775 /srv/filesharing
 
     systemctl restart smb
     systemctl restart nmb
 
+    # chcon -t samba_share_t /share
+
     testparm
+
     echo "Press any key to continue..."
     read -n 1 -s key
 }
