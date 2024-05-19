@@ -3,7 +3,7 @@ clear
 
 display_menu() {
     echo "|-------------------------------------------|"
-    echo "|            NTP server wizard              |"
+    echo "|  ${GREEN}          NTP server wizard     ${NC}         |"
     echo "|-------------------------------------------|"
     echo "|         What do you want to do?           |"
     echo "|-------------------------------------------|"

@@ -202,11 +202,17 @@
 	\subsubsection{Explications}
 	Le contenu du menu est connu à l'avance, nous pouvons donc imprimer chaque ligne de sélection de choix à l'écran.
 	Une boucle maintient le menu à l'écran et regarde si une option est entrée. Si elle est valide, elle fait un chmod +x sur le script concerné,et le lance.
-	\subsubsection{Utilisation du script}
+	
 L'utilisation du script est assez explicite, il suffit de lire la liste des options et sélectionner le caractère correspondant. Etant assez simple, le menu est également robuste et ne requiert pas de précautions d'usage particulières.
 
  \subsection{NTP}
- Pour le NTP, 
+ \subsubsection{Introduction}
+ Pour le NTP, on utilise chrony.
+ C'est un logiciel de synchronisation de l'heure pour les systèmes unix, et sert à synchroniser notre serveur et les machines qui y sont connectées disposent tous de la même heure système.
+ \subsubsection{Explications}
+ La première partie du script install chrony si il n'est pas déjà installé, et par défaut, la timezone est réglée sur Bruxelles.
+ La deuxième partie permet de choisir une timezone correcte.
+ La troisième permet d'afficher les infos.
 
 
 	\subsection{DNS}
@@ -233,8 +239,6 @@ L'utilisation du script est assez explicite, il suffit de lire la liste des opti
 	
 	\end{enumerate}	
 	
-	\subsubsection{Utilisation du script}
-
 	\subsection{Partage SAMBA}
 	\subsubsection{Introduction}
 	\subsubsection{Explications}
@@ -269,7 +273,6 @@ L'utilisation du script est assez explicite, il suffit de lire la liste des opti
 			\item Changer le mot de passe
 		\end{itemize}	
 	\end{itemize}
-	\subsubsection{Utilisation du script}
 
 	\subsection{Partage NFS}
 	\subsubsection{Introduction}
@@ -279,7 +282,6 @@ L'utilisation du script est assez explicite, il suffit de lire la liste des opti
 	
 	Montage d'un FS samba sous Unix :
 	\texttt{mount -t smbfs -o} (voir annexes du cours de linux P78)
-	\subsubsection{Utilisation du script}
 	
 	\newpage
 	
@@ -350,8 +352,6 @@ L'utilisation du script est assez explicite, il suffit de lire la liste des opti
 		\item Remove web directory of user
 		\item Display web directories
 	\end{itemize}
-
-	\subsubsection{Utilisation du script}	
 	
 	
 	\newpage
@@ -359,7 +359,6 @@ L'utilisation du script est assez explicite, il suffit de lire la liste des opti
 	\subsection{Serveur SQL}
 	\subsubsection{Introduction}
 	\subsubsection{Explications}	
-	\subsubsection{Utilisation du script}	
 
 	\subsection{Serveur FTP}
 	\subsubsection{Introduction}
@@ -406,7 +405,6 @@ Le mode standalone indique que le serveur est autonome, et que le service tourne
 	\end{center}		
 	\end{itemize}
 	
-	\subsubsection{Utilisation du script}
 	
 	Le menu présente diverses options :
 	\begin{itemize}
