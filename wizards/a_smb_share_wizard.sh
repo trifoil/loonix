@@ -6,7 +6,7 @@ NC='\033[0m' # No Color
 
 display_menu() {
     echo "|-------------------------------------------|"
-    echo "|            ${GREEN}SMB server wizard${NC}              |"
+    echo -e "|            ${GREEN}SMB server wizard${NC}              |"
     echo "|-------------------------------------------|"
     echo "|         What do you want to do?           |"
     echo "|-------------------------------------------|"
