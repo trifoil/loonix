@@ -61,6 +61,8 @@ timezone_display() {
     chronyc tracking
     chronyc sources
     cat /etc/chrony.conf
+    echo "Press any key to exit..."
+    read -n 1 -s key
 }
 
 
