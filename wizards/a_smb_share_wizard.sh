@@ -19,10 +19,24 @@ display_menu() {
     echo "| 6. Disable SMB user                       |"
     echo "| 7. Enable SMB user                        |"
     echo "| 8. Install SMB                            |"
+    echo "| 9. testing                                |"
     echo "|-------------------------------------------|"
     echo "| q. Quit                                   |"
     echo "|-------------------------------------------|"
     echo ""
+}
+
+testing() {
+    sudo mkdir -p /srv/samba/shared
+    sudo chown -R nobody:nobody /srv/samba/shared
+    sudo chmod -R 0775 /srv/samba/shared
+
+    sudo systemctl restart smb
+    sudo systemctl restart nmb
+
+    testparm
+    echo "Press any key to continue..."
+    read -n 1 -s key
 }
 
 install_samba() {
