@@ -1,8 +1,11 @@
 #!/bin/bash
 clear
 
-GREEN='\e[32m'
-NC='\e[0m' # No Color
+RED='\033[0;31m' #Red
+GREEN='\033[0;32m' #Red
+NC='\033[0m' # No Color
+
+
 
 display_menu() {
     echo "|-------------------------------------------|"
