@@ -18,6 +18,7 @@ display_menu() {
     echo "| 5. Remove all SMB users                   |"
     echo "| 6. Disable SMB user                       |"
     echo "| 7. Enable SMB user                        |"
+    echo "| 8. Install SMB                            |"
     echo "|-------------------------------------------|"
     echo "| q. Quit                                   |"
     echo "|-------------------------------------------|"
@@ -97,6 +98,7 @@ main() {
             3) add_smb_user ;;
             4) remove_smb_user ;;
             5) remove_all_smb_users ;;
+            8) install_samba ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
