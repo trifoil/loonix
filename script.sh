@@ -9,8 +9,6 @@ updatedb
 
 # Function to display the menu
 display_menu() {
-It is advised to do a big prayer now or this installer may not work
-                Welcome to the server assistant                    
     echo ""
     echo "|-----------------------------------------------------------------------|"
     echo -e "| ${GREEN}                Welcome to the server assistant                   ${NC}   |"
