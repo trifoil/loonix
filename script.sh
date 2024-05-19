@@ -13,7 +13,7 @@ display_menu() {
     echo ""
     echo "|----------------------------------------------------------------------|"
     echo -e "|                 ${GREEN}Welcome to the server assistant ${NC}                     |"
-    echo "| Please select the tool you want to use :                             |"
+    echo "|              Please select the tool you want to use                  |"
     echo "|----------------------------------------------------------------------|"
     echo "| Networking :                                                         |"
     echo "|----------------------------------------------------------------------|"
