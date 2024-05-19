@@ -9,7 +9,7 @@ NC='\033[0m' # No Color
 
 display_menu() {
     echo "|-------------------------------------------|"
-    echo  -e  "|            ${GREEN}NTP server wizard${NC}              |"
+    echo -e "|            ${GREEN}NTP server wizard${NC}              |"
     echo "|-------------------------------------------|"
     echo "|         What do you want to do?           |"
     echo "|-------------------------------------------|"
