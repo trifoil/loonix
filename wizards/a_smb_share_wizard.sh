@@ -24,6 +24,20 @@ display_menu() {
     echo ""
 }
 
+install_samba() {
+    sudo dnf update -y
+    dnf -y install samba samba-client
+    sudo systemctl enable smb --now
+    sudo systemctl enable nmb --now    
+
+    sudo firewall-cmd --permanent --add-service=samba
+    sudo firewall-cmd --reload
+
+    echo "Press any key to continue..."
+    read -n 1 -s key
+	clear
+}
+
 display_unix_users() {
     getent passwd | awk -F: '$3 >= 1000 && $3 < 65534 {print $1}'
     echo "Press any key to continue..."
@@ -70,9 +84,6 @@ remove_all_smb_users() {
 }
 
 main() {
-	# install samba if not installed already
-	dnf -y install samba
-	clear
 	echo "Starting the samba configuration wizard..."
 	sleep 1
     	while true; do
