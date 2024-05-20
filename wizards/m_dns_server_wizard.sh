@@ -24,9 +24,9 @@ install_dns_server() {
 
     cp -f config_files/dns/example.com.zone /var/named/example.com.zone
     chown named:named /var/named/example.com.zone
-    chown named:named /var/named/example.net.zone
+    # chown named:named /var/named/example.net.zone
     chmod 640 /var/named/example.com.zone
-    chmod 640 /var/named/example.net.zone
+    # chmod 640 /var/named/example.net.zone
 
     systemctl start named
     systemctl enable named
@@ -55,6 +55,7 @@ main() {
         read -p "Enter your choice: " choice
         case $choice in
             0) install_dns_server ;;
+            
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
