@@ -19,7 +19,7 @@ display_menu() {
 }
 
 install_dns_server() {
-    sudo dnf -y install bind bind-utils
+    dnf -y install bind bind-utils
     cp -f config_files/dns/named.conf /etc/named.conf
 
     cp -f config_files/dns/example.com.zone /var/named/example.com.zone
