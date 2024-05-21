@@ -27,7 +27,7 @@ display_menu() {
     echo "|----------------------------------------------------------------------|"
     echo "| Server health :                                                      |"
     echo "|----------------------------------------------------------------------|"
-    echo "| 7. Multitool (User policy/quota/disk-man/updates/antivirus-firewall) |"
+    echo "| 7. IP (User policy/quota/disk-man/updates/antivirus-firewall)        |"
     echo "| 8. Backup                                                            |"
     echo "|----------------------------------------------------------------------|"
     echo "| q. Quit                                                              |"
@@ -73,6 +73,13 @@ dns_server_wizard() {
     sh wizards/m_dns_server_wizard.sh
 }
 
+ip_setup() {
+    echo "Welcome to the IP addr wizard!"
+    chmod +x wizards/a_ip_setup.sh
+    sh wizards/a_ip_setup.sh
+
+}
+
 # Main function
 main() {
     while true; do
@@ -85,6 +92,7 @@ main() {
             3) ftp_server_wizard ;;
             5) dns_server_wizard ;;
             6) ntp_server_wizard ;;
+            7) ip_setup ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
