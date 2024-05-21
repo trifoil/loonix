@@ -20,12 +20,14 @@ display_menu() {
 install_dns_server() {
     dnf -y install bind bind-utils
     cp -f config_files/dns/named.conf /etc/named.conf
+    cp -f config_files/dns/forward.mankou.local /var/named/forward.mankou.local
+    cp -f config_files/dns/reverse.mankou.local /var/named/reverse.mankou.local
 
-    cp -f config_files/dns/example.com.zone /var/named/example.com.zone
-    chown named:named /var/named/example.com.zone
-    # chown named:named /var/named/example.net.zone
-    chmod 640 /var/named/example.com.zone
-    # chmod 640 /var/named/example.net.zone
+    chown root:named /var/named/forward.mankou.local
+    chown root:named /var/named/reverse.mankou.local
+    chmod 644 /var/named/forward.mankou.local
+    chmod 644 /var/named/reverse.mankou.local
+
 
     systemctl start named
     systemctl enable named

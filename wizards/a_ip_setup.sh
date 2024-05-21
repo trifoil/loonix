@@ -13,7 +13,7 @@ NETWORK=$(echo "$NETWORK_INFO" | grep 'IP4.ROUTE' | grep $GATEWAY | awk '{print 
 
 # Calculate the second available IP in the subnet
 IFS=. read -r i1 i2 i3 i4 <<< "$(echo $NETWORK | cut -d/ -f1)"
-SECOND_IP="${i1}.${i2}.${i3}.$((i4 + 2))"
+SECOND_IP="${i1}.${i2}.${i3}.$((i4 + 100))"
 
 # Set the second available IP as the static IP
 nmcli connection modify $INTERFACE ipv4.addresses $SECOND_IP/$SUBNET
@@ -27,5 +27,5 @@ nmcli connection up $INTERFACE
 # Verify the new IP address
 ip a show $INTERFACE
 
-    echo "Press any key to continue..."
-    read -n 1 -s key
+echo "Press any key to continue..."
+read -n 1 -s key
