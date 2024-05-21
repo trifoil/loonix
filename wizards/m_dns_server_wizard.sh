@@ -48,7 +48,7 @@ test_dns_server() {
 }
 
 main() {
-	echo "Starting the samba configuration wizard..."
+	echo "Starting the DNS configuration wizard..."
 	sleep 1
     	while true; do
     	clear
