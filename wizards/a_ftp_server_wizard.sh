@@ -2,9 +2,13 @@
 
 #source: https://doc.fedora-fr.org/wiki/Vsftpd_:_Installation_et_configuration
 
+RED='\033[0;31m' #Red
+GREEN='\033[0;32m' #Red
+NC='\033[0m' # No Color
+
 display_menu() {
     echo "|-------------------------------------------|"
-    echo "|            FTP server wizard              |"
+    echo "|            ${GREEN}FTP server wizard${NC}              |"
     echo "|-------------------------------------------|"
     echo "|         What do you want to do?           |"
     echo "|-------------------------------------------|"
