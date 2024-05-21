@@ -7,9 +7,32 @@ service httpd restart
 
 
 
-edit_profil(){}
 
-delete_profil(){}
+
+display_menu() {
+    echo ""
+    echo "|----------------------------------------------------------------------|"
+    echo "| 0. Editer le profil                                                  |"
+    echo "| 1. Supprimer le profil                                               |"
+    echo "| q. Quit                                                              |"
+    echo "|----------------------------------------------------------------------|"
+    echo ""
+}
+
+
+
+edit_profil(){  
+
+    nano /etc/httpd/conf.d/phpMyAdmin.conf
+
+}
+
+
+
+
+delete_profil(){
+
+}
 
 
 
