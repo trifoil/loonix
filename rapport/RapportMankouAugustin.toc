@@ -28,5 +28,6 @@
 \contentsline {subsubsection}{\numberline {2.8.1}Introduction}{9}{subsubsection.2.8.1}%
 \contentsline {subsubsection}{\numberline {2.8.2}Explications}{9}{subsubsection.2.8.2}%
 \contentsline {subsection}{\numberline {2.9}Backup}{11}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}rsync et rsnapshot}{11}{subsubsection.2.9.1}%
 \contentsline {subsection}{\numberline {2.10}Partitionnement}{12}{subsection.2.10}%
 \contentsline {section}{\numberline {3}Conclusion}{13}{section.3}%
