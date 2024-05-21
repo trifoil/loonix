@@ -27,5 +27,5 @@ nmcli connection up $INTERFACE
 # Verify the new IP address
 ip a show $INTERFACE
 
-    echo "Press any key to continue..."
-    read -n 1 -s key
+echo "Press any key to continue..."
+read -n 1 -s key
