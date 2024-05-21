@@ -20,6 +20,8 @@ display_menu() {
 install_dns_server() {
     dnf -y install bind bind-utils
     cp -f config_files/dns/named.conf /etc/named.conf
+    cp -f  /var/named/mankou.local.reverse
+    
 
     cp -f config_files/dns/example.com.zone /var/named/example.com.zone
     chown named:named /var/named/example.com.zone
