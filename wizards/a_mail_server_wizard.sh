@@ -24,9 +24,13 @@ install_mail_server() {
     sudo nano /etc/postfix/main.cf
     nano /etc/dovecot/dovecot.conf
     nano /etc/dovecot/conf.d/10-mail.conf
+    nano /etc/dovecot/conf.d/10-auth.conf
+    nano /etc/dovecot/conf.d/10-master.conf
 
-    # cp -f config_files/mail/main.cf /etc/postfix/main.cf
-    # cp -f config_files/mail/dovecot.conf /etc/dovecot/dovecot.conf
+    cp -f config_files/mail/main.cf /etc/postfix/main.cf
+    cp -f config_files/mail/dovecot.conf /etc/dovecot/dovecot.conf
+    cp -f config_files/mail/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
+    cp -f config_files/mail/10-master.conf /etc/dovecot/conf.d/10-master.conf
 }
 
 main() {
