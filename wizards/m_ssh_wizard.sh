@@ -36,3 +36,21 @@ main() {
 }
 
 main
+
+
+port_ssh=6666
+
+#Remplace le port ssh par un port personnalisé
+sed -i -e "s/#Port 22/Port $port_ssh/g" -e "s/Port 22/Port $port_ssh/g" /etc/ssh/sshd_config
+
+#Desactive root en ssh
+sed -i -e "s/#PermitRootLogin yes/PermitRootLogin no/g" -e "s/PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
+
+#Desactive le login par mot de passe
+sed -i -e "s/#PasswordAuthentication yes/PasswordAuthentication no/g" -e "s/PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
+
+#Active l'authentification par clé
+sed -i -e "s/#PubkeyAuthentication yes/PubkeyAuthentication yes/g" -e "s/PubkeyAuthentication no/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
+
+#Redémarre le service sshd
+systemctl restart sshd
