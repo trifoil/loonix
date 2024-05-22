@@ -8,6 +8,8 @@ NC='\033[0m' # No Color
 
 updatedb
 systemctl enable --now cockpit.socket
+firewall-cmd --permanent --zone=public --add-service=cockpit
+firewall-cmd --reload
 
 # Function to display the menu
 display_menu() {
