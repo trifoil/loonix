@@ -29,8 +29,6 @@ install_mail_server() {
     # cp -f config_files/mail/dovecot.conf /etc/dovecot/dovecot.conf
 }
 
-
-
 main() {
 	echo "Starting the DNS configuration wizard..."
 	sleep 1
