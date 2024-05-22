@@ -12,6 +12,27 @@ display_menu() {
     echo ""
 }
 
+setup_ssh_key() {
+    port_ssh=6666
+
+    iptables -A INPUT -p tcp --dport $port_ssh -j ACCEPT
+
+    #Remplace le port ssh par un port personnalisé
+    sed -i "s/#Port 22/Port $port_ssh/g"  /etc/ssh/sshd_config
+
+    #Desactive root en ssh
+    sed -i "s/#PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
+
+    #Desactive le login par mot de passe
+    sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
+
+    #Active l'authentification par clé
+    sed -i "s/#PubkeyAuthentication yes/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
+
+    #Redémarre le service sshd
+    systemctl restart sshd
+
+}
 
 fail2ban_setup() {
     systemctl start firewalld
@@ -33,6 +54,7 @@ main() {
         display_menu
         read -p "Enter your choice: " choice
         case $choice in
+            0) setup_ssh_key ;;
             1) fail2ban_setup ;;
             
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
@@ -43,20 +65,3 @@ main() {
 
 main
 
-
-port_ssh=6666
-
-#Remplace le port ssh par un port personnalisé
-sed -i "s/#Port 22/Port $port_ssh/g"  /etc/ssh/sshd_config
-
-#Desactive root en ssh
-sed -i "s/#PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
-
-#Desactive le login par mot de passe
-sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
-
-#Active l'authentification par clé
-sed -i "s/#PubkeyAuthentication yes/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
-
-#Redémarre le service sshd
-systemctl restart sshd
