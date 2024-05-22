@@ -81,6 +81,12 @@ ip_setup() {
 
 }
 
+mail_server() {
+    echo "Welcome to the mail assistant"
+    chmod +x wizards/a_mail_server_wizard.sh
+    sh wizards/a_mail_server_wizard.sh
+}
+
 # Main function
 main() {
     while true; do
@@ -94,6 +100,7 @@ main() {
             5) dns_server_wizard ;;
             6) ntp_server_wizard ;;
             7) ip_setup ;;
+            9) mail_server ;;
             q|Q) clear && echo "Exiting the web server configuration wizard." && exit ;;
             *) clear && echo "Invalid choice. Please enter a valid option." ;;
         esac
