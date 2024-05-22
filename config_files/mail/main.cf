@@ -1,0 +1,10 @@
+myhostname = mail.mankou.local
+mydomain = mankou.local
+myorigin = $mydomain
+inet_interfaces = all
+inet_protocols = all
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+mynetworks = 127.0.0.0/8
+home_mailbox = Maildir/
+smtpd_banner = $myhostname ESMTP $mail_name
+smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
