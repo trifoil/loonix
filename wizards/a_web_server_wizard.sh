@@ -11,16 +11,30 @@
     }
 
     install_web_server() {
-        echo "Installing required packages"
-        dnf -y install httpd mod_ssl mod_md 
+        echo "Installing required HTTP packages"
+        dnf -y install httpd httpd-tools mod_ssl mod_md 
         echo "Done"
         echo "Adding the service to firewall"
         firewall-cmd --add-service=https --permanent
         firewall-cmd --add-service=http  --permanent
         firewall-cmd --reload
-        echo "Starting and enabling the service"
+        echo "Installing php 8.1 and modules"
+        sudo dnf install php -y
+        sudo dnf module enable php:8.1 -y
+        sudo dnf erase php -y
+        sudo dnf install php -y
+        dnf install php-mysqlnd php-dom php-simplexml php-xml php-xmlreader php-curl php-exif php-ftp php-gd php-iconv php-json php-mbstring php-posix php-sockets php-tokenizer -y
+        echo "Php 8.1 installed"
         systemctl start httpd
+        echo "Starting and enabling the service"
+        systemctl restart httpd
         systemctl enable httpd
+        echo "Config vhost for mankou.lan"
+        cat ../config_files/web/conf.d | sudo tee /etc/httpd/conf.d/mankou.lan.conf
+        sed -i 's|SHORT_DESCR|mankou.lan serveur prod hebergement web|g' /etc/httpd/conf.d/mankou.lan.conf
+        sed -i 's|FQN_NAME|mankou.lan|g' /etc/httpd/conf.d/mankou.lan.conf
+        sed -i 's|BASE_NAME|mankou|g' /etc/httpd/conf.d/mankou.lan.conf
+        sed -i 's|OPTIONAL_ALIAS|www.mankou.lan|g' /etc/httpd/conf.d/mankou.lan.conf
     }
 
     show_httpd_status() {
@@ -46,6 +60,13 @@
             cd /srv
             mkdir -p "$selected_user"
             echo "Directory '$selected_user' created successfully."
+            cat ../config_files/web/conf.d | sudo tee /etc/httpd/conf.d/$selected_user.lan.conf
+            sed -i "s|SHORT_DESCR|$selected_user.lan serveur prod hebergement web|g" /etc/httpd/conf.d/$selected_user.lan.conf
+            sed -i "s|FQN_NAME|$selected_user.lan|g" /etc/httpd/conf.d/$selected_user.lan.conf
+            sed -i "s|BASE_NAME|$selected_user|g" /etc/httpd/conf.d/$selected_user.lan.conf
+            sed -i "s|OPTIONAL_ALIAS|www.$selected_user.lan|g" /etc/httpd/conf.d/$selected_user.lan.conf
+            echo "vhost for $selected_user.lan installed successfully."
+
         }
 
         # Main menu loop
@@ -84,6 +105,8 @@
             cd /srv
             rm -rf "$selected_user"
             echo "Directory '$selected_user' erased successfully."
+            rm -rf /etc/httpd/conf.d/$selected_user.lan.conf
+            echo "vhost for $selected_user.lan erased successfully."
         }
 
         # sub menu loop
