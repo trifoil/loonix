@@ -431,11 +431,42 @@ Le mode standalone indique que le serveur est autonome, et que le service tourne
 	\newpage
 	
 	\subsection{Backup}
-	Le menu Backup doit comporter deux options :
+	
+	La section backup est bien sûr une partie extrêmement sensible de notre travail.
+	
+	Il existe une multitude d'outils parmi lesquels choisir, mais nous aborderons les plus connus, qui sont également les plus robustes.
+	
+Parmi ces outils, il va être possible de choisir entre deux types de sauvegardes : 
+
+\begin{itemize}
+\item Incrémentales :
+Seuls les fichiers ayant été modifiés vont être sauvegardés durant le backup. 
+\item Complètes :
+Toutes les données sélectionnées sont sauvegardées lors du backup.	
+\end{itemize}	
+
+	Des avantages et inconvénients existent pour les deux types de sauvegarde. Il est donc intéressant de proposer les deux options dans l'utilitaire.
+	
+L'incrémental va être très performant, en termes de taille des sauvegardes et donc en termes de temps de sauvegarde également.
+	
+Les backups complets auront, eux, l'avange d'être plus simples, et plus robustes. Ils ne dépendent bien sûr pas des versions précédentes.
+	
+	Nous aurons donc à discuter du choix entre :
 	\begin{itemize}
-		\item Backup
-		\item Restore
+	\item rsync
+	\item rsnapshot
+	\item scp
+	\item tar
+	\item dd
+	\item Timeshift
 	\end{itemize}
+
+\subsubsection{rsync et rsnapshot}
+
+
+
+
+
 	
 	\newpage
 	
@@ -458,5 +489,30 @@ Le mode standalone indique que le serveur est autonome, et que le service tourne
 		Author, A. (Year). Title of the article. \textit{Journal Name}, Volume(Issue), Pages.
 	\end{thebibliography}
 
+	\href{https://www.tecmint.com/install-fail2ban-rocky-linux-almalinux/ }{A}
 
+	\href{https://doc.ubuntu-fr.org/fail2ban}{B}
+	
+	\href{https://www.server-world.info/en/note?os=AlmaLinux_9&p=ftp&f=5}{C}
+	
+	\href{https://reintech.io/blog/setting-up-ftp-server-vsftpd-almalinux-9}{D}
+	
+	\href{https://www.it-connect.fr/chapitres/dns-installer-un-serveur-bind-sous-linux/}{E}
+	
+	\href{https://www.virtono.com/community/tutorial-how-to/how-to-install-apache-on-almalinux-9-1/}{F}
+	
+	\href{https://www.virtono.com/community/tutorial-how-to/how-to-install-apache-on-almalinux-9-1/}{G}
+	
+	\href{https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04}{H}
+	
+	\href{https://rdr-it.io/hyper-v-creer-un-switch-nat/}{I}
+	
+	\href{https://www.tecmint.com/install-samba-rhel-rocky-linux-and-almalinux/}{J}
+	
+	\href{https://www.redhat.com/sysadmin/firewalld-linux-firewall}{K}
+	
+	\href{https://debian-handbook.info/browse/fr-FR/stable/sect.selinux.html}{L}
+	
+	\href{https://blog.microlinux.fr/selinux/}{M}
+	
 \end{document}

@@ -17,6 +17,12 @@ fail2ban_setup() {
     systemctl start firewalld
     systemctl enable firewalld
     systemctl status firewalld
+
+    dnf install epel-release
+    dnf install fail2ban fail2ban-firewalld
+    systemctl start fail2ban
+    systemctl enable fail2ban
+    systemctl status fail2ban
 }
 
 main() {

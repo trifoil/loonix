@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 39) (preloaded format=pdflatex 2024.5.20)  20 MAY 2024 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 39) (preloaded format=pdflatex 2024.5.20)  22 MAY 2024 00:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -475,24 +475,30 @@ Package pdftex.def Info: webservdefault.png  used on input line 345.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8] [9 <./webservdefault.png>] [10] [11] [12]
-<gosling.png, id=238, 1084.05pt x 1084.05pt>
+<gosling.png, id=239, 1084.05pt x 1084.05pt>
 File: gosling.png Graphic file (type png)
 <use gosling.png>
-Package pdftex.def Info: gosling.png  used on input line 450.
+Package pdftex.def Info: gosling.png  used on input line 481.
 (pdftex.def)             Requested size: 216.81pt x 216.80615pt.
  [13 <./gosling.png>]
 (./RapportMankouAugustin.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `RapportMankouAugustin.out' has not changed.
-(rerunfilecheck)             Checksum: 7F6453B4A47FDA48C38A48660E961433;3794.
+
+Package rerunfilecheck Warning: File `RapportMankouAugustin.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `RapportMankouAugustin.out':
+(rerunfilecheck)             Before: 7F6453B4A47FDA48C38A48660E961433;3794
+(rerunfilecheck)             After:  C8791FFE2581539484C94B1F72B02C8E;3958.
  ) 
 Here is how much of TeX's memory you used:
- 11816 strings out of 477985
- 180195 string characters out of 5839370
+ 11818 strings out of 477985
+ 180222 string characters out of 5839370
  1862388 words of memory out of 6000000
- 31815 multiletter control sequences out of 15000+600000
+ 31816 multiletter control sequences out of 15000+600000
  520999 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,7n,76p,384b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -505,10 +511,10 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1000.pfb>
-Output written on RapportMankouAugustin.pdf (13 pages, 2129389 bytes).
+Output written on RapportMankouAugustin.pdf (13 pages, 2132124 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 272 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
  282 words of extra memory for PDF output out of 10000 (max. 10000000)
 
