@@ -35,6 +35,12 @@
         sed -i 's|FQN_NAME|mankou.lan|g' /etc/httpd/conf.d/mankou.lan.conf
         sed -i 's|BASE_NAME|mankou|g' /etc/httpd/conf.d/mankou.lan.conf
         sed -i 's|OPTIONAL_ALIAS|www.mankou.lan|g' /etc/httpd/conf.d/mankou.lan.conf
+        echo "vhost for mankou.lan installed successfully."
+        echo "Creating the directory /srv/mankou"
+        mkdir -p /srv/mankou
+        echo "Directory /srv/mankou created successfully."
+        echo "Create info.php file in /srv/mankou"
+        echo "<?php phpinfo(); ?>" | sudo tee /srv/mankou/info.php
     }
 
     show_httpd_status() {
