@@ -8,3 +8,4 @@ $TTL 86400
 ;
 @       IN  NS      ns.mankou.local.
 2       IN  PTR     mankou.local.
+104     IN  PTR     mail.mankou.local.

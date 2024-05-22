@@ -31,6 +31,33 @@ install_mail_server() {
     cp -f config_files/mail/dovecot.conf /etc/dovecot/dovecot.conf
     cp -f config_files/mail/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
     cp -f config_files/mail/10-master.conf /etc/dovecot/conf.d/10-master.conf
+
+    systemctl start postfix
+    systemctl enable postfix
+    systemctl start dovecot
+    systemctl enable dovecot
+
+    firewall-cmd --permanent --add-service=smtp
+    firewall-cmd --permanent --add-service=imap
+    firewall-cmd --permanent --add-service=pop3
+    firewall-cmd --reload
+
+    #setup des dns etc etc
+
+    dnf install opendkim opendkim-tools -y
+    mkdir /etc/opendkim
+    opendkim-genkey -D /etc/opendkim/ -d mankou.local -s default
+    mv /etc/opendkim/default.private /etc/opendkim/private.key
+
+    systemctl reload named
+
+    #testing
+    adduser testuser
+    passwd testuser
+
+    echo "Test email body" | mail -s "Test Email" testuser@yourdomain.com
+    echo "Press any key to continue..."
+    read -n 1 -s key
 }
 
 main() {

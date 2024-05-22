@@ -9,3 +9,8 @@ $TTL 86400
 @       IN  NS      ns.mankou.local.
 ns      IN  A       10.10.17.104
 @       IN  A       10.10.17.104
+mail    IN  A       10.10.17.104
+@       IN  MX 10   mail.mankou.local.
+@       IN  TXT     "v=spf1 a mx ~all"
+default._domainkey    IN  TXT     "v=DKIM1; k=rsa; p=YOUR_PUBLIC_KEY"
+_dmarc  IN  TXT     "v=DMARC1; p=none; rua=mailto:postmaster@mankou.local"

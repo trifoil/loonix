@@ -7,6 +7,7 @@ GREEN='\033[0;32m' #Red
 NC='\033[0m' # No Color
 
 updatedb
+systemctl enable --now cockpit.socket
 
 # Function to display the menu
 display_menu() {
