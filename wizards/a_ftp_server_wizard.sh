@@ -50,7 +50,7 @@ install_ftp_server() {
 
 fonction_de_merde() {
     CONF_DIR="/etc/vsftpd/vsftpd_user_conf"
-    FTP_DIR_BASE="/share/ftp"
+    FTP_DIR_BASE="/srv"
 
 
     # Check if the configuration directory exists
@@ -84,7 +84,7 @@ fonction_de_merde() {
         echo "local_root=$user_ftp_dir already present in $conf_file"
     fi
     done
-    
+
     echo "Script execution completed."
 }
 
