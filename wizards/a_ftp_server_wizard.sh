@@ -35,7 +35,7 @@ install_ftp_server() {
     cp config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
     chmod 600 /etc/vsftpd/vsftpd.conf
 
-    
+    chmod 777 -R /srv
 
     firewall-cmd --permanent --add-port=20/tcp
     firewall-cmd --permanent --add-port=21/tcp
