@@ -35,6 +35,8 @@ install_ftp_server() {
     cp config_files/ftp/vsftpd.conf /etc/vsftpd/vsftpd.conf
     chmod 600 /etc/vsftpd/vsftpd.conf
 
+    
+
     firewall-cmd --permanent --add-port=20/tcp
     firewall-cmd --permanent --add-port=21/tcp
     firewall-cmd --reload
@@ -46,15 +48,63 @@ install_ftp_server() {
     sleep 1
 }
 
+fonction_de_merde() {
+    CONF_DIR="/etc/vsftpd/vsftpd_user_conf"
+    FTP_DIR_BASE="/share/ftp"
+
+
+    # Check if the configuration directory exists
+    if [ ! -d "$CONF_DIR" ]; then
+    echo "Configuration directory $CONF_DIR does not exist. Exiting."
+    exit 1
+    fi
+
+    # Iterate through each user configuration file in the CONF_DIR
+    for conf_file in "$CONF_DIR"/*; do
+    # Extract the username from the configuration file name
+    user=$(basename "$conf_file")
+
+    # Define the user's FTP directory
+    user_ftp_dir="$FTP_DIR_BASE/$user"
+
+    # Create the user's FTP directory if it doesn't exist
+    if [ ! -d "$user_ftp_dir" ]; then
+        mkdir -p "$user_ftp_dir"
+        echo "Created directory $user_ftp_dir"
+    else
+        echo "Directory $user_ftp_dir already exists"
+    fi
+
+    # Check if the user's FTP directory is already in their configuration file
+    if ! grep -q "local_root=$user_ftp_dir" "$conf_file"; then
+        # Add the directory path to the user's configuration file
+        echo "local_root=$user_ftp_dir" >> "$conf_file"
+        echo "Added local_root=$user_ftp_dir to $conf_file"
+    else
+        echo "local_root=$user_ftp_dir already present in $conf_file"
+    fi
+    done
+    
+    echo "Script execution completed."
+}
+
 upload_config() {
     cp -f config_files/ftp/login.txt /etc/vsftpd/login.txt
     sudo dnf -y install libdb-utils
     mkdir /etc/vsftpd/vsftpd_user_conf
+    chmod 
     txt2db /etc/vsftpd/login.txt /etc/vsftpd/login.db
     cleanconf
     cp -f config_files/ftp/pam/vsftpd /etc/pam.d/vsftpd
     systemctl restart vsftpd.service
     echo "Press any key to continue..."
+    
+    echo "loading users dirs"
+    fonction_de_merde
+
+    systemctl restart vsftpd.service
+    echo "Press any key to continue..."
+
     read -n 1 -s key
 }
 
@@ -160,6 +210,7 @@ show_ftp_status () {
 
 directory_attribution () {
     echo "test"
+
 }
 
 main() {
